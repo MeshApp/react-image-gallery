@@ -210,6 +210,8 @@ class App extends React.Component {
           slideInterval={parseInt(this.state.slideInterval)}
           slideOnThumbnailHover={this.state.slideOnThumbnailHover}
           additionalClass="app-image-gallery"
+          arrowsColor={'red'}
+          arrowsSize={'40px'}
         />
 
         <div className='app-sandbox'>

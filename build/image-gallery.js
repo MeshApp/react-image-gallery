@@ -1046,8 +1046,8 @@ var ImageGallery = function (_React$Component) {
         this._canNavigate() ? [this.props.showNav && _react2.default.createElement(
           'span',
           { key: 'navigation' },
-          this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor),
-          this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor)
+          this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor, this.props.arrowsSize),
+          this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor, this.props.arrowsSize)
         ), this.props.disableSwipe ? _react2.default.createElement(
           'div',
           { className: 'image-gallery-slides', key: 'slides' },
@@ -1217,7 +1217,8 @@ ImageGallery.propTypes = {
   stopPropagation: _propTypes2.default.bool,
   additionalClass: _propTypes2.default.string,
   useTranslate3D: _propTypes2.default.bool,
-  arrowsColor: _propTypes2.default.string
+  arrowsColor: _propTypes2.default.string,
+  arrowsSize: _propTypes2.default.string
 };
 ImageGallery.defaultProps = {
   items: [],
@@ -1247,21 +1248,22 @@ ImageGallery.defaultProps = {
   slideInterval: 3000,
   swipeThreshold: 30,
   arrowsColor: '#FFFFFF',
-  renderLeftNav: function renderLeftNav(onClick, disabled, arrowsColor) {
+  arrowsSize: '40px',
+  renderLeftNav: function renderLeftNav(onClick, disabled, arrowsColor, arrowsSize) {
     return _react2.default.createElement('button', {
       type: 'button',
       className: 'image-gallery-left-nav',
-      style: { outline: 'none', color: arrowsColor },
+      style: { outline: 'none', color: arrowsColor, fontSize: arrowsSize },
       disabled: disabled,
       onClick: onClick,
       'aria-label': 'Previous Slide'
     });
   },
-  renderRightNav: function renderRightNav(onClick, disabled, arrowsColor) {
+  renderRightNav: function renderRightNav(onClick, disabled, arrowsColor, arrowsSize) {
     return _react2.default.createElement('button', {
       type: 'button',
       className: 'image-gallery-right-nav',
-      style: { outline: 'none', color: arrowsColor },
+      style: { outline: 'none', color: arrowsColor, fontSize: arrowsSize },
       disabled: disabled,
       onClick: onClick,
       'aria-label': 'Next Slide'

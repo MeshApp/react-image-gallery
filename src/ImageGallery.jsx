@@ -80,7 +80,8 @@ export default class ImageGallery extends React.Component {
     stopPropagation: PropTypes.bool,
     additionalClass: PropTypes.string,
     useTranslate3D: PropTypes.bool,
-    arrowsColor: PropTypes.string
+    arrowsColor: PropTypes.string,
+    arrowsSize: PropTypes.string,
   };
 
   static defaultProps = {
@@ -111,24 +112,25 @@ export default class ImageGallery extends React.Component {
     slideInterval: 3000,
     swipeThreshold: 30,
     arrowsColor: '#FFFFFF',
-    renderLeftNav: (onClick, disabled, arrowsColor) => {
+    arrowsSize: '40px',
+    renderLeftNav: (onClick, disabled, arrowsColor, arrowsSize) => {
       return (
         <button
           type='button'
           className='image-gallery-left-nav'
-          style={{outline: 'none', color: arrowsColor}}
+          style={{outline: 'none', color: arrowsColor, fontSize: arrowsSize}}
           disabled={disabled}
           onClick={onClick}
           aria-label='Previous Slide'
         />
       );
     },
-    renderRightNav: (onClick, disabled, arrowsColor) => {
+    renderRightNav: (onClick, disabled, arrowsColor, arrowsSize) => {
       return (
         <button
           type='button'
           className='image-gallery-right-nav'
-          style={{outline: 'none', color: arrowsColor}}
+          style={{outline: 'none', color: arrowsColor, fontSize: arrowsSize}}
           disabled={disabled}
           onClick={onClick}
           aria-label='Next Slide'
@@ -1101,8 +1103,8 @@ export default class ImageGallery extends React.Component {
             [
               this.props.showNav &&
                 <span key='navigation'>
-                  {this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor)}
-                  {this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor)}
+                  {this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor, this.props.arrowsSize)}
+                  {this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor, this.props.arrowsSize)}
                 </span>,
 
                 this.props.disableSwipe ?
