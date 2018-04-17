@@ -80,6 +80,7 @@ export default class ImageGallery extends React.Component {
     stopPropagation: PropTypes.bool,
     additionalClass: PropTypes.string,
     useTranslate3D: PropTypes.bool,
+    arrowsColor: PropTypes.string
   };
 
   static defaultProps = {
@@ -109,22 +110,25 @@ export default class ImageGallery extends React.Component {
     swipingTransitionDuration: 0,
     slideInterval: 3000,
     swipeThreshold: 30,
-    renderLeftNav: (onClick, disabled) => {
+    arrowsColor: '#FFFFFF',
+    renderLeftNav: (onClick, disabled, arrowsColor) => {
       return (
         <button
           type='button'
           className='image-gallery-left-nav'
+          style={{outline: 'none', color: arrowsColor}}
           disabled={disabled}
           onClick={onClick}
           aria-label='Previous Slide'
         />
       );
     },
-    renderRightNav: (onClick, disabled) => {
+    renderRightNav: (onClick, disabled, arrowsColor) => {
       return (
         <button
           type='button'
           className='image-gallery-right-nav'
+          style={{outline: 'none', color: arrowsColor}}
           disabled={disabled}
           onClick={onClick}
           aria-label='Next Slide'
@@ -1097,8 +1101,8 @@ export default class ImageGallery extends React.Component {
             [
               this.props.showNav &&
                 <span key='navigation'>
-                  {this.props.renderLeftNav(slideLeft, !this._canSlideLeft())}
-                  {this.props.renderRightNav(slideRight, !this._canSlideRight())}
+                  {this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor)}
+                  {this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor)}
                 </span>,
 
                 this.props.disableSwipe ?

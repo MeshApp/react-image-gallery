@@ -79,18 +79,9 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 
   &::before {
     @extend %ion;
-    color: $ig-white;
     line-height: .7;
     text-shadow: 0 2px 2px lighten($ig-black, 10%);
     transition: color .2s ease-out;
-  }
-
-  &:hover::before {
-    color: $ig-blue;
-
-    @media (max-width: $ig-screen-sm-min) {
-      color: $ig-white;
-    }
   }
 }
 
