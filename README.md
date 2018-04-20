@@ -78,6 +78,16 @@ class MyComponent extends React.Component {
 
 # Props
 
+## Meshapp Props
+
+```
+arrowsColor={'red'} // Accepts 'red' and '#FF0000'
+
+arrowsSize={'40px'}/>
+```
+
+## Original Props
+
 * `items`: (required) Array of objects, see example above,
   * Available Properties
     * `original` - image src url
