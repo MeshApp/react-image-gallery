@@ -42,7 +42,7 @@ gulp.task('sass-no-icon', function () {
     .pipe(livereload());
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   watchify(browserify({
     entries: './example/app.js',
     extensions: ['.jsx'],
@@ -55,7 +55,7 @@ gulp.task('scripts', function() {
     .pipe(livereload());
 });
 
-gulp.task('demo-src', function() {
+gulp.task('demo-src', function () {
   process.env.NODE_ENV = 'production';
   browserify({
     entries: './example/app.js',
@@ -70,7 +70,7 @@ gulp.task('demo-src', function() {
 
   gulp.src(['./styles/css/image-gallery.css', './example/app.css'])
     .pipe(concat('demo.css'))
-    .pipe(cleanCSS({keepSpecialComments: false}))
+    .pipe(cleanCSS({ keepSpecialComments: false }))
     .pipe(gulp.dest('./demo/'));
 });
 
@@ -81,12 +81,19 @@ gulp.task('source-js', function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('watch', function() {
+gulp.task('source-js2', function () {
+  return gulp.src('./src/presentationSlider.jsx')
+    .pipe(concat('presentation-slider.js'))
+    .pipe(babel(babelOptions))
+    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('watch', function () {
   livereload.listen();
   gulp.watch(['styles/**/*.scss'], ['sass']);
   gulp.watch(['src/*.jsx', 'example/app.js'], ['scripts']);
 });
 
 gulp.task('dev', ['watch', 'scripts', 'sass', 'server']);
-gulp.task('build', ['source-js', 'sass', 'sass-no-icon']);
+gulp.task('build', ['source-js', 'source-js2', 'sass', 'sass-no-icon']);
 gulp.task('demo', ['demo-src']);
