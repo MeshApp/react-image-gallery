@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import ImageGallery from '../src/ImageGallery';
+import PresentationSlider from '../src/presentationSlider';
 
 const PREFIX_URL = 'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
 
@@ -25,6 +26,14 @@ class App extends React.Component {
       thumbnailPosition: 'bottom',
       showVideo: {},
     };
+    // titulo 150 description 250
+    this.presentationImages = [
+      { original: 'https://www.planwallpaper.com/static/images/4442617-hd-wallpapers.jpg', title: 'title1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero ola', description: 'description1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero pretium ut. Aliquam ac placerat orci. Suspendisse potenti. Integer in nisl turpis. In suscipit ve' },
+      { original: 'https://9cover.com/images/ccovers/1365343343cute-cat-in-the-city.jpg', title: 'title2', description: 'description2' },
+      { original: 'https://www.pixelstalk.net/wp-content/uploads/2016/07/3D-HD-Nature-Images-Free-Download.jpg', title: 'title3', description: 'description3' },
+      { original: 'https://www.hd-wallpapersdownload.com/script/bulk-upload/hd-computer-hd-wallpapers-3D.jpg', title: 'title4', description: 'description4' },
+      { original: 'http://livewallpaperswide.com/wp-content/uploads/2017/01/wallpaper-hd-1080p-1.jpg', title: 'title5', description: 'description5' }
+    ]
 
     this.images = [
       {
@@ -40,11 +49,11 @@ class App extends React.Component {
         imageSet: [
           {
             srcSet: `${PREFIX_URL}image_set_cropped.jpg`,
-            media : '(max-width: 1280px)',
+            media: '(max-width: 1280px)',
           },
           {
             srcSet: `${PREFIX_URL}image_set_default.jpg`,
-            media : '(min-width: 1280px)',
+            media: '(min-width: 1280px)',
           }
         ]
       },
@@ -60,7 +69,7 @@ class App extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.slideInterval !== prevState.slideInterval ||
-        this.state.slideDuration !== prevState.slideDuration) {
+      this.state.slideDuration !== prevState.slideDuration) {
       // refresh setInterval
       this._imageGallery.pause();
       this._imageGallery.play();
@@ -93,15 +102,15 @@ class App extends React.Component {
   }
 
   _handleInputChange(state, event) {
-    this.setState({[state]: event.target.value});
+    this.setState({ [state]: event.target.value });
   }
 
   _handleCheckboxChange(state, event) {
-    this.setState({[state]: event.target.checked});
+    this.setState({ [state]: event.target.checked });
   }
 
   _handleThumbnailPositionChange(event) {
-    this.setState({thumbnailPosition: event.target.value});
+    this.setState({ thumbnailPosition: event.target.value });
   }
 
   _getStaticImages() {
@@ -109,7 +118,7 @@ class App extends React.Component {
     for (let i = 2; i < 12; i++) {
       images.push({
         original: `${PREFIX_URL}${i}.jpg`,
-        thumbnail:`${PREFIX_URL}${i}t.jpg`
+        thumbnail: `${PREFIX_URL}${i}t.jpg`
       });
     }
 
@@ -117,14 +126,14 @@ class App extends React.Component {
   }
 
   _resetVideo() {
-    this.setState({showVideo: {}});
+    this.setState({ showVideo: {} });
 
     if (this.state.showPlayButton) {
-      this.setState({showGalleryPlayButton: true});
+      this.setState({ showGalleryPlayButton: true });
     }
 
     if (this.state.showFullscreenButton) {
-      this.setState({showGalleryFullscreenButton: true});
+      this.setState({ showGalleryFullscreenButton: true });
     }
   }
 
@@ -136,11 +145,11 @@ class App extends React.Component {
 
     if (this.state.showVideo[url]) {
       if (this.state.showPlayButton) {
-        this.setState({showGalleryPlayButton: false});
+        this.setState({ showGalleryPlayButton: false });
       }
 
       if (this.state.showFullscreenButton) {
-        this.setState({showGalleryFullscreenButton: false});
+        this.setState({ showGalleryFullscreenButton: false });
       }
     }
   }
@@ -151,32 +160,32 @@ class App extends React.Component {
         {
           this.state.showVideo[item.embedUrl] ?
             <div className='video-wrapper'>
-                <a
-                  className='close-video'
-                  onClick={this._toggleShowVideo.bind(this, item.embedUrl)}
-                >
-                </a>
-                <iframe
-                  width='560'
-                  height='315'
-                  src={item.embedUrl}
-                  frameBorder='0'
-                  allowFullScreen
-                >
-                </iframe>
+              <a
+                className='close-video'
+                onClick={this._toggleShowVideo.bind(this, item.embedUrl)}
+              >
+              </a>
+              <iframe
+                width='560'
+                height='315'
+                src={item.embedUrl}
+                frameBorder='0'
+                allowFullScreen
+              >
+              </iframe>
             </div>
-          :
+            :
             <a onClick={this._toggleShowVideo.bind(this, item.embedUrl)}>
               <div className='play-button'></div>
-              <img src={item.original}/>
+              <img src={item.original} />
               {
                 item.description &&
-                  <span
-                    className='image-gallery-description'
-                    style={{right: '0', left: 'initial'}}
-                  >
-                    {item.description}
-                  </span>
+                <span
+                  className='image-gallery-description'
+                  style={{ right: '0', left: 'initial' }}
+                >
+                  {item.description}
+                </span>
               }
             </a>
         }
@@ -213,6 +222,30 @@ class App extends React.Component {
           arrowsColor={'red'}
           arrowsSize={'40px'}
         />
+        <div style={{ padding: '10px 0px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          MESHAPP - Presentation Slider
+        </div>
+        <PresentationSlider
+          ref={i => this._imageGallery = i}
+          items={this.presentationImages}
+          lazyLoad={false}
+          onClick={this._onImageClick.bind(this)}
+          onImageLoad={this._onImageLoad}
+          onSlide={this._onSlide.bind(this)}
+          onPause={this._onPause.bind(this)}
+          onScreenChange={this._onScreenChange.bind(this)}
+          onPlay={this._onPlay.bind(this)}
+          infinite={this.state.infinite}
+          showBullets={true}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showThumbnails={false}
+          showIndex={false}
+          showNav={false}
+          additionalClass="app-image-gallery"
+          arrowsColor={'red'}
+          arrowsSize={'30px'}
+        />
 
         <div className='app-sandbox'>
 
@@ -227,7 +260,7 @@ class App extends React.Component {
                     className='app-interval-input'
                     type='text'
                     onChange={this._handleInputChange.bind(this, 'slideInterval')}
-                    value={this.state.slideInterval}/>
+                    value={this.state.slideInterval} />
                 </div>
               </li>
 
@@ -238,7 +271,7 @@ class App extends React.Component {
                     className='app-interval-input'
                     type='text'
                     onChange={this._handleInputChange.bind(this, 'slideDuration')}
-                    value={this.state.slideDuration}/>
+                    value={this.state.slideDuration} />
                 </div>
               </li>
 
@@ -265,64 +298,64 @@ class App extends React.Component {
                   id='infinite'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'infinite')}
-                  checked={this.state.infinite}/>
-                  <label htmlFor='infinite'>allow infinite sliding</label>
+                  checked={this.state.infinite} />
+                <label htmlFor='infinite'>allow infinite sliding</label>
               </li>
               <li>
                 <input
                   id='show_fullscreen'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'showFullscreenButton')}
-                  checked={this.state.showFullscreenButton}/>
-                  <label htmlFor='show_fullscreen'>show fullscreen button</label>
+                  checked={this.state.showFullscreenButton} />
+                <label htmlFor='show_fullscreen'>show fullscreen button</label>
               </li>
               <li>
                 <input
                   id='show_playbutton'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'showPlayButton')}
-                  checked={this.state.showPlayButton}/>
-                  <label htmlFor='show_playbutton'>show play button</label>
+                  checked={this.state.showPlayButton} />
+                <label htmlFor='show_playbutton'>show play button</label>
               </li>
               <li>
                 <input
                   id='show_bullets'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'showBullets')}
-                  checked={this.state.showBullets}/>
-                  <label htmlFor='show_bullets'>show bullets</label>
+                  checked={this.state.showBullets} />
+                <label htmlFor='show_bullets'>show bullets</label>
               </li>
               <li>
                 <input
                   id='show_thumbnails'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'showThumbnails')}
-                  checked={this.state.showThumbnails}/>
-                  <label htmlFor='show_thumbnails'>show thumbnails</label>
+                  checked={this.state.showThumbnails} />
+                <label htmlFor='show_thumbnails'>show thumbnails</label>
               </li>
               <li>
                 <input
                   id='show_navigation'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'showNav')}
-                  checked={this.state.showNav}/>
-                  <label htmlFor='show_navigation'>show navigation</label>
+                  checked={this.state.showNav} />
+                <label htmlFor='show_navigation'>show navigation</label>
               </li>
               <li>
                 <input
                   id='show_index'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'showIndex')}
-                  checked={this.state.showIndex}/>
-                  <label htmlFor='show_index'>show index</label>
+                  checked={this.state.showIndex} />
+                <label htmlFor='show_index'>show index</label>
               </li>
               <li>
                 <input
                   id='slide_on_thumbnail_hover'
                   type='checkbox'
                   onChange={this._handleCheckboxChange.bind(this, 'slideOnThumbnailHover')}
-                  checked={this.state.slideOnThumbnailHover}/>
-                  <label htmlFor='slide_on_thumbnail_hover'>slide on thumbnail hover (desktop)</label>
+                  checked={this.state.slideOnThumbnailHover} />
+                <label htmlFor='slide_on_thumbnail_hover'>slide on thumbnail hover (desktop)</label>
               </li>
             </ul>
           </div>
@@ -333,4 +366,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('container'));
+ReactDOM.render(<App />, document.getElementById('container'));
