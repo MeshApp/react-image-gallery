@@ -194,7 +194,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 .presentation-slider-mobile-info {
   display: none;
   padding: 15px 5px 15px 5px;
-  background-color: green;
 
   .title {
     display: flex;
@@ -260,6 +259,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       padding: 20px;
       display: flex;
       white-space: normal;
+      text-align: left;
 
       @media (max-width: 768px) {
           font-size: 15px;
@@ -357,7 +357,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
   }
 
   @media (max-width: 768px) {
-    .presentation-slider-bullets {
       padding: 20px 0px;
       justify-content: center;
       .leftNav {
@@ -366,7 +365,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       .rightNav {
         display: none;
       }
-    }}
+    }
 
 }
 

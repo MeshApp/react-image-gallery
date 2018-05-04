@@ -173,8 +173,7 @@
 
 .presentation-slider-mobile-info {
   display: none;
-  padding: 15px 5px 15px 5px;
-  background-color: green; }
+  padding: 15px 5px 15px 5px; }
   .presentation-slider-mobile-info .title {
     display: flex;
     color: #000000;
@@ -224,7 +223,8 @@
       line-height: 1;
       padding: 20px;
       display: flex;
-      white-space: normal; }
+      white-space: normal;
+      text-align: left; }
       @media (max-width: 768px) {
         .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-title {
           font-size: 15px;
@@ -303,12 +303,12 @@
     .presentation-slider-bullets .image-gallery-bullet .image-gallery-bullet.active {
       background: #fff; }
   @media (max-width: 768px) {
-    .presentation-slider-bullets .presentation-slider-bullets {
+    .presentation-slider-bullets {
       padding: 20px 0px;
       justify-content: center; }
-      .presentation-slider-bullets .presentation-slider-bullets .leftNav {
+      .presentation-slider-bullets .leftNav {
         display: none; }
-      .presentation-slider-bullets .presentation-slider-bullets .rightNav {
+      .presentation-slider-bullets .rightNav {
         display: none; } }
 
 .image-gallery-bullets {
