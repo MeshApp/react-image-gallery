@@ -193,28 +193,41 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 
 .presentation-slider-mobile-info {
   display: none;
-  padding: 15px 0px 15px 0px;
-  width: 100%;
+  padding: 15px 5px 15px 5px;
   background-color: green;
 
   .title {
     display: flex;
     color: #000000;
+    width: 100%;
     font-weight: bold;
     font-size: 16px;
     justify-content: center;
+    text-align: center;
+    p {
+      line-height: 1.3em;
+      word-break: normal;
+      white-space: normal;
+    }
   }
 
   .description {
     display: flex;
+    width: 100%;
     color: #000000;
     justify-content: center;
+    text-align: center;
+    p {
+      line-height: 1.3em;
+      word-break: normal;
+      white-space: normal;
+    }
   }
 
-  @media (max-width: 768px) {
-    .presentation-slider-mobile-info {
+  @media (max-width: $ig-screen-sm-min) {
       display: flex;
-      flex-direction: column; } }
+      flex-direction: column; 
+    }
 
 }
 
@@ -239,7 +252,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
     flex-direction: column;
     position: absolute;
 
-    .image-gallery-title {
+    .meshapp-image-gallery-title {
       color: #fff;
       font-size: 25px;
       font-weight: bold;
@@ -247,25 +260,26 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       padding: 20px;
       display: flex;
       white-space: normal;
+
       @media (max-width: 768px) {
-        .image-gallery-title {
           font-size: 15px;
           padding: 20px;
-          display: none; } }
+          display: none; }
     }
 
-    .image-gallery-description {
+    .meshapp-image-gallery-description {
       color: #fff;
       line-height: 1;
       padding-left: 20px;
       font-size: 20px;
+      display: flex;
       padding: 5px 5px 5px 20px;
       white-space: normal;
-      @media (max-width: 768px) {
-        .image-gallery-description {
+
+      @media (max-width: $ig-screen-sm-min) {
           padding: 5px 5px 5px 20px;
           font-size: 15px;
-          display: none; } }
+          display: none; }
     }
   }
 
@@ -279,11 +293,9 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
     position: absolute;
     white-space: normal;
 
-    @media (max-width: $ig-screen-sm-min) {
-      bottom: 45px;
-      font-size: .8em;
-      padding: 8px 15px;
-    }
+      @media (max-width: $ig-screen-sm-min) {
+          padding: 5px 5px 5px 20px;
+          font-size: 15px; }
 
   }
 }

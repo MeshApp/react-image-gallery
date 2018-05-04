@@ -287,12 +287,12 @@ var PresentationSlider = function (_React$Component) {
           { className: 'meshapp-info-wrapper' },
           item.title && _react2.default.createElement(
             'div',
-            { className: 'image-gallery-title' },
+            { className: 'meshapp-image-gallery-title' },
             item.title
           ),
           item.description && _react2.default.createElement(
-            'span',
-            { className: 'image-gallery-description' },
+            'div',
+            { className: 'meshapp-image-gallery-description' },
             item.description
           )
         )
@@ -1030,13 +1030,15 @@ var PresentationSlider = function (_React$Component) {
             }
             return _this6.slideToIndex.call(_this6, index, event);
           };
+          var btnStyle = currentIndex === index ? { backgroundColor: '' + _this6.props.dotActiveColor, border: '1px solid ' + _this6.props.dotActiveColor } : { backgroundColor: '' + _this6.props.dotInactiveColor, border: '1px solid ' + _this6.props.dotInactiveColor };
           bullets.push(_react2.default.createElement('button', {
             key: index,
             type: 'button',
             className: ['image-gallery-bullet', currentIndex === index ? 'active' : '', item.bulletClass || ''].join(' '),
             onClick: bulletOnClick,
-            'aria-pressed': currentIndex === index ? 'true' : 'false',
-            'aria-label': 'Go to Slide ' + (index + 1)
+            style: btnStyle
+            //aria-pressed={currentIndex === index ? 'true' : 'false'}
+            , 'aria-label': 'Go to Slide ' + (index + 1)
           }));
         }
       });
@@ -1164,7 +1166,7 @@ var PresentationSlider = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'SOMETHING HERE'
+                this.props.items[this.state.currentIndex].title
               )
             ),
             _react2.default.createElement(
@@ -1173,7 +1175,7 @@ var PresentationSlider = function (_React$Component) {
               _react2.default.createElement(
                 'p',
                 null,
-                'DESC'
+                this.props.items[this.state.currentIndex].description
               )
             )
           ),
@@ -1259,7 +1261,9 @@ PresentationSlider.propTypes = {
   additionalClass: _propTypes2.default.string,
   useTranslate3D: _propTypes2.default.bool,
   arrowsColor: _propTypes2.default.string,
-  arrowsSize: _propTypes2.default.string
+  arrowsSize: _propTypes2.default.string,
+  dotActiveColor: _propTypes2.default.string,
+  dotInactiveColor: _propTypes2.default.string
 };
 PresentationSlider.defaultProps = {
   items: [],
@@ -1290,6 +1294,8 @@ PresentationSlider.defaultProps = {
   swipeThreshold: 30,
   arrowsColor: '#FFFFFF',
   arrowsSize: '40px',
+  dotActiveColor: 'black',
+  dotInactiveColor: 'white',
   renderLeftNav: function renderLeftNav(onClick, disabled, arrowsColor, arrowsSize) {
     return _react2.default.createElement('button', {
       type: 'button',

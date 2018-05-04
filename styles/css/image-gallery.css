@@ -173,21 +173,32 @@
 
 .presentation-slider-mobile-info {
   display: none;
-  padding: 15px 0px 15px 0px;
-  width: 100%;
+  padding: 15px 5px 15px 5px;
   background-color: green; }
   .presentation-slider-mobile-info .title {
     display: flex;
     color: #000000;
+    width: 100%;
     font-weight: bold;
     font-size: 16px;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
+    .presentation-slider-mobile-info .title p {
+      line-height: 1.3em;
+      word-break: normal;
+      white-space: normal; }
   .presentation-slider-mobile-info .description {
     display: flex;
+    width: 100%;
     color: #000000;
-    justify-content: center; }
+    justify-content: center;
+    text-align: center; }
+    .presentation-slider-mobile-info .description p {
+      line-height: 1.3em;
+      word-break: normal;
+      white-space: normal; }
   @media (max-width: 768px) {
-    .presentation-slider-mobile-info .presentation-slider-mobile-info {
+    .presentation-slider-mobile-info {
       display: flex;
       flex-direction: column; } }
 
@@ -206,7 +217,7 @@
     display: flex;
     flex-direction: column;
     position: absolute; }
-    .image-gallery-slide .meshapp-info-wrapper .image-gallery-title {
+    .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-title {
       color: #fff;
       font-size: 25px;
       font-weight: bold;
@@ -215,19 +226,20 @@
       display: flex;
       white-space: normal; }
       @media (max-width: 768px) {
-        .image-gallery-slide .meshapp-info-wrapper .image-gallery-title .image-gallery-title {
+        .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-title {
           font-size: 15px;
           padding: 20px;
           display: none; } }
-    .image-gallery-slide .meshapp-info-wrapper .image-gallery-description {
+    .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-description {
       color: #fff;
       line-height: 1;
       padding-left: 20px;
       font-size: 20px;
+      display: flex;
       padding: 5px 5px 5px 20px;
       white-space: normal; }
       @media (max-width: 768px) {
-        .image-gallery-slide .meshapp-info-wrapper .image-gallery-description .image-gallery-description {
+        .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-description {
           padding: 5px 5px 5px 20px;
           font-size: 15px;
           display: none; } }
@@ -242,9 +254,8 @@
     white-space: normal; }
     @media (max-width: 768px) {
       .image-gallery-slide .image-gallery-description {
-        bottom: 45px;
-        font-size: .8em;
-        padding: 8px 15px; } }
+        padding: 5px 5px 5px 20px;
+        font-size: 15px; } }
 
 .presentation-slider-bullets {
   position: relative;

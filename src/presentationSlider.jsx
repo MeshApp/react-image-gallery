@@ -82,6 +82,8 @@ export default class PresentationSlider extends React.Component {
     useTranslate3D: PropTypes.bool,
     arrowsColor: PropTypes.string,
     arrowsSize: PropTypes.string,
+    dotActiveColor: PropTypes.string,
+    dotInactiveColor: PropTypes.string,
   };
 
   static defaultProps = {
@@ -113,6 +115,8 @@ export default class PresentationSlider extends React.Component {
     swipeThreshold: 30,
     arrowsColor: '#FFFFFF',
     arrowsSize: '40px',
+    dotActiveColor: 'black',
+    dotInactiveColor: 'white',
     renderLeftNav: (onClick, disabled, arrowsColor, arrowsSize) => {
       return (
         <button
@@ -934,15 +938,15 @@ export default class PresentationSlider extends React.Component {
         {<div className='meshapp-info-wrapper'>
           {
             item.title &&
-            <div className='image-gallery-title'>
+            <div className='meshapp-image-gallery-title'>
               {item.title}
             </div>
           }
           {
             item.description &&
-            <span className='image-gallery-description'>
+            <div className='meshapp-image-gallery-description'>
               {item.description}
-            </span>
+            </div>
           }
         </div>}
       </div>
@@ -1070,6 +1074,8 @@ export default class PresentationSlider extends React.Component {
           }
           return this.slideToIndex.call(this, index, event);
         };
+        let btnStyle = currentIndex === index ? { backgroundColor: `${this.props.dotActiveColor}`, border: `1px solid ${this.props.dotActiveColor}` } :
+          { backgroundColor: `${this.props.dotInactiveColor}`, border: `1px solid ${this.props.dotInactiveColor}` }
         bullets.push(
           <button
             key={index}
@@ -1080,7 +1086,8 @@ export default class PresentationSlider extends React.Component {
               item.bulletClass || ''
             ].join(' ')}
             onClick={bulletOnClick}
-            aria-pressed={currentIndex === index ? 'true' : 'false'}
+            style={btnStyle}
+            //aria-pressed={currentIndex === index ? 'true' : 'false'}
             aria-label={`Go to Slide ${index + 1}`}
           >
           </button>
@@ -1205,10 +1212,10 @@ export default class PresentationSlider extends React.Component {
           }
           {<div className='presentation-slider-mobile-info'>
             <div className='title'>
-              <p>SOMETHING HERE</p>
+              <p>{this.props.items[this.state.currentIndex].title}</p>
             </div>
             <div className='description'>
-              <p>DESC</p>
+              <p>{this.props.items[this.state.currentIndex].description}</p>
             </div>
           </div>}
           {

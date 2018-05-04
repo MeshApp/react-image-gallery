@@ -243,6 +243,8 @@ class App extends React.Component {
           showIndex={false}
           showNav={false}
           additionalClass="app-image-gallery"
+          dotActiveColor={'red'}
+          dotInactiveColor={'black'}
           arrowsColor={'red'}
           arrowsSize={'30px'}
         />
