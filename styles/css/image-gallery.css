@@ -237,7 +237,8 @@
       font-size: 20px;
       display: flex;
       padding: 5px 5px 5px 20px;
-      white-space: normal; }
+      white-space: normal;
+      text-align: left; }
       @media (max-width: 768px) {
         .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-description {
           padding: 5px 5px 5px 20px;

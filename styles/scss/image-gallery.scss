@@ -275,6 +275,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       display: flex;
       padding: 5px 5px 5px 20px;
       white-space: normal;
+      text-align: left;
 
       @media (max-width: $ig-screen-sm-min) {
           padding: 5px 5px 5px 20px;
