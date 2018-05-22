@@ -951,13 +951,13 @@ export default class PresentationSlider extends React.Component {
         {<div className='meshapp-info-wrapper'>
           {
             item.title &&
-            <div className='meshapp-image-gallery-title' style={{ color: this.props.mobileTitleColor }}>
+            <div className='meshapp-image-gallery-title'>
               {item.title}
             </div>
           }
           {
             item.description &&
-            <div className='meshapp-image-gallery-description' style={{ color: this.props.mobileDescriptionColor }}>
+            <div className='meshapp-image-gallery-description'>
               {item.description}
             </div>
           }
@@ -1223,11 +1223,11 @@ export default class PresentationSlider extends React.Component {
               </div>
             </div>
           }
-          {<div className='presentation-slider-mobile-info'>
+          {<div className='presentation-slider-mobile-info' style={{ color: this.props.mobileTitleColor }}>
             <div className='title'>
               <p>{this.props.items[this.state.currentIndex].title}</p>
             </div>
-            <div className='description'>
+            <div className='description' style={{ color: this.props.mobileDescriptionColor }}>
               <p>{this.props.items[this.state.currentIndex].description}</p>
             </div>
           </div>}
