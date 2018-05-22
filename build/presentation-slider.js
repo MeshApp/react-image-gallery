@@ -291,12 +291,12 @@ var PresentationSlider = function (_React$Component) {
           { className: 'meshapp-info-wrapper' },
           item.title && _react2.default.createElement(
             'div',
-            { className: 'meshapp-image-gallery-title' },
+            { className: 'meshapp-image-gallery-title', style: { color: _this.props.mobileTitleColor } },
             item.title
           ),
           item.description && _react2.default.createElement(
             'div',
-            { className: 'meshapp-image-gallery-description' },
+            { className: 'meshapp-image-gallery-description', style: { color: _this.props.mobileDescriptionColor } },
             item.description
           )
         )

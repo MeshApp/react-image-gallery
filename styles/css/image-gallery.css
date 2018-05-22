@@ -215,7 +215,6 @@
     flex-direction: column;
     position: absolute; }
     .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-title {
-      color: #fff;
       font-size: 25px;
       font-weight: bold;
       line-height: 1;
@@ -229,7 +228,6 @@
           padding: 20px;
           display: none; } }
     .image-gallery-slide .meshapp-info-wrapper .meshapp-image-gallery-description {
-      color: #fff;
       line-height: 1;
       padding-left: 20px;
       font-size: 20px;
