@@ -253,9 +253,13 @@ var PresentationSlider = function (_React$Component) {
     _this._renderItem = function (item) {
       var onImageError = _this.props.onImageError || _this._handleImageError;
 
+      var clickStyle = _this.props.onSliderClick ? { cursor: 'pointer' } : {};
+
       return _react2.default.createElement(
         'div',
-        { className: 'image-gallery-image' },
+        { className: 'image-gallery-image', style: clickStyle, onClick: function onClick() {
+            return _this.sliderClicked(item);
+          } },
         item.imageSet ? _react2.default.createElement(
           'picture',
           {
@@ -330,6 +334,8 @@ var PresentationSlider = function (_React$Component) {
       isPlaying: false
     };
 
+    _this.sliderClicked = _this.sliderClicked.bind(_this);
+
     if (props.lazyLoad) {
       _this._lazyLoaded = [];
     }
@@ -354,6 +360,11 @@ var PresentationSlider = function (_React$Component) {
       if (this.state.currentIndex >= nextProps.items.length) {
         this.slideToIndex(0);
       }
+    }
+  }, {
+    key: 'sliderClicked',
+    value: function sliderClicked(item) {
+      this.props.onSliderClick && this.props.onSliderClick(item);
     }
   }, {
     key: 'componentDidUpdate',
@@ -1263,7 +1274,8 @@ PresentationSlider.propTypes = {
   arrowsColor: _propTypes2.default.string,
   arrowsSize: _propTypes2.default.string,
   dotActiveColor: _propTypes2.default.string,
-  dotInactiveColor: _propTypes2.default.string
+  dotInactiveColor: _propTypes2.default.string,
+  onSliderClick: _propTypes2.default.func
 };
 PresentationSlider.defaultProps = {
   items: [],

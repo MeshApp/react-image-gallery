@@ -26,6 +26,7 @@ class App extends React.Component {
       thumbnailPosition: 'bottom',
       showVideo: {},
     };
+    this.presentationClicked = this.presentationClicked.bind(this)
     // titulo 150 description 250
     this.presentationImages = [
       { original: 'https://www.planwallpaper.com/static/images/4442617-hd-wallpapers.jpg', title: 'title1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero ola', description: 'description1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero pretium ut. Aliquam ac placerat orci. Suspendisse potenti. Integer in nisl turpis. In suscipit ve' },
@@ -78,6 +79,11 @@ class App extends React.Component {
 
   _onImageClick(event) {
     console.debug('clicked on image', event.target, 'at index', this._imageGallery.getCurrentIndex());
+  }
+
+  presentationClicked(item) {
+    console.log('aqui', item);
+
   }
 
   _onImageLoad(event) {
@@ -247,6 +253,7 @@ class App extends React.Component {
           dotInactiveColor={'black'}
           arrowsColor={'red'}
           arrowsSize={'30px'}
+          onSliderClick={this.presentationClicked}
         />
 
         <div className='app-sandbox'>

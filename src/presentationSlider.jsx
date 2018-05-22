@@ -26,6 +26,8 @@ export default class PresentationSlider extends React.Component {
       isPlaying: false
     };
 
+    this.sliderClicked = this.sliderClicked.bind(this)
+
     if (props.lazyLoad) {
       this._lazyLoaded = [];
     }
@@ -84,6 +86,7 @@ export default class PresentationSlider extends React.Component {
     arrowsSize: PropTypes.string,
     dotActiveColor: PropTypes.string,
     dotInactiveColor: PropTypes.string,
+    onSliderClick: PropTypes.func,
   };
 
   static defaultProps = {
@@ -182,6 +185,10 @@ export default class PresentationSlider extends React.Component {
     if (this.state.currentIndex >= nextProps.items.length) {
       this.slideToIndex(0);
     }
+  }
+
+  sliderClicked(item) {
+    this.props.onSliderClick && this.props.onSliderClick(item);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -901,8 +908,10 @@ export default class PresentationSlider extends React.Component {
   _renderItem = (item) => {
     const onImageError = this.props.onImageError || this._handleImageError;
 
+    let clickStyle = this.props.onSliderClick ? { cursor: 'pointer' } : {}
+
     return (
-      <div className='image-gallery-image'>
+      <div className='image-gallery-image' style={clickStyle} onClick={() => this.sliderClicked(item)}>
         {
           item.imageSet ?
             <picture
