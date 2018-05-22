@@ -176,7 +176,6 @@
   padding: 15px 5px 15px 5px; }
   .presentation-slider-mobile-info .title {
     display: flex;
-    color: #000000;
     width: 100%;
     font-weight: bold;
     font-size: 16px;
@@ -189,7 +188,6 @@
   .presentation-slider-mobile-info .description {
     display: flex;
     width: 100%;
-    color: #000000;
     justify-content: center;
     text-align: center; }
     .presentation-slider-mobile-info .description p {

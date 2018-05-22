@@ -291,12 +291,12 @@ var PresentationSlider = function (_React$Component) {
           { className: 'meshapp-info-wrapper' },
           item.title && _react2.default.createElement(
             'div',
-            { className: 'meshapp-image-gallery-title' },
+            { className: 'meshapp-image-gallery-title', style: { color: _this.props.mobileTitleColor } },
             item.title
           ),
           item.description && _react2.default.createElement(
             'div',
-            { className: 'meshapp-image-gallery-description' },
+            { className: 'meshapp-image-gallery-description', style: { color: _this.props.mobileDescriptionColor } },
             item.description
           )
         )
@@ -1275,7 +1275,9 @@ PresentationSlider.propTypes = {
   arrowsSize: _propTypes2.default.string,
   dotActiveColor: _propTypes2.default.string,
   dotInactiveColor: _propTypes2.default.string,
-  onSliderClick: _propTypes2.default.func
+  onSliderClick: _propTypes2.default.func,
+  mobileTitleColor: _propTypes2.default.string,
+  mobileDescriptionColor: _propTypes2.default.string
 };
 PresentationSlider.defaultProps = {
   items: [],
@@ -1308,6 +1310,8 @@ PresentationSlider.defaultProps = {
   arrowsSize: '40px',
   dotActiveColor: 'black',
   dotInactiveColor: 'white',
+  mobileTitleColor: 'white',
+  mobileDescriptionColor: 'black',
   renderLeftNav: function renderLeftNav(onClick, disabled, arrowsColor, arrowsSize) {
     return _react2.default.createElement('button', {
       type: 'button',

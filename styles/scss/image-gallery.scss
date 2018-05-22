@@ -197,7 +197,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 
   .title {
     display: flex;
-    color: #000000;
     width: 100%;
     font-weight: bold;
     font-size: 16px;
@@ -213,7 +212,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
   .description {
     display: flex;
     width: 100%;
-    color: #000000;
     justify-content: center;
     text-align: center;
     p {

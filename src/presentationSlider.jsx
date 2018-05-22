@@ -87,6 +87,8 @@ export default class PresentationSlider extends React.Component {
     dotActiveColor: PropTypes.string,
     dotInactiveColor: PropTypes.string,
     onSliderClick: PropTypes.func,
+    mobileTitleColor: PropTypes.string,
+    mobileDescriptionColor: PropTypes.string,
   };
 
   static defaultProps = {
@@ -120,6 +122,8 @@ export default class PresentationSlider extends React.Component {
     arrowsSize: '40px',
     dotActiveColor: 'black',
     dotInactiveColor: 'white',
+    mobileTitleColor: 'white',
+    mobileDescriptionColor: 'black',
     renderLeftNav: (onClick, disabled, arrowsColor, arrowsSize) => {
       return (
         <button
@@ -947,13 +951,13 @@ export default class PresentationSlider extends React.Component {
         {<div className='meshapp-info-wrapper'>
           {
             item.title &&
-            <div className='meshapp-image-gallery-title'>
+            <div className='meshapp-image-gallery-title' style={{ color: this.props.mobileTitleColor }}>
               {item.title}
             </div>
           }
           {
             item.description &&
-            <div className='meshapp-image-gallery-description'>
+            <div className='meshapp-image-gallery-description' style={{ color: this.props.mobileDescriptionColor }}>
               {item.description}
             </div>
           }
