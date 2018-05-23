@@ -88,6 +88,13 @@ gulp.task('source-js2', function () {
     .pipe(gulp.dest('./build'));
 });
 
+gulp.task('source-js3', function () {
+  return gulp.src('./src/insideNavSlider.jsx')
+    .pipe(concat('insidenav-slider.js'))
+    .pipe(babel(babelOptions))
+    .pipe(gulp.dest('./build'));
+});
+
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch(['styles/**/*.scss'], ['sass']);
@@ -95,5 +102,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('dev', ['watch', 'scripts', 'sass', 'server']);
-gulp.task('build', ['source-js', 'source-js2', 'sass', 'sass-no-icon']);
+gulp.task('build', ['source-js', 'source-js2', 'source-js3', 'sass', 'sass-no-icon']);
 gulp.task('demo', ['demo-src']);
