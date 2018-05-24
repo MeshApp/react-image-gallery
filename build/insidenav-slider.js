@@ -310,23 +310,23 @@ var InsideNavSlider = function (_React$Component) {
                 { style: { display: 'flex', flexDirection: 'row', textAlign: 'center', alignItems: 'center' } },
                 _react2.default.createElement(
                   'p',
-                  { className: 'insidenav-slider-left-nav' },
+                  { onClick: _this._slideLeft, className: 'insidenav-slider-left-nav' },
                   _react2.default.createElement('i', { className: 'fas fa-chevron-left' })
                 ),
                 _react2.default.createElement(
                   'p',
                   { className: 'insidenav-slider-firstnumber' },
-                  '1'
+                  _this.state.currentIndex + 1
                 ),
                 _this.renderBarraDaMaria(_this.props.mobileTitleColor),
                 _react2.default.createElement(
                   'p',
                   { className: 'insidenav-slider-secondnumber' },
-                  '4'
+                  _this.props.items.length
                 ),
                 _react2.default.createElement(
                   'p',
-                  { className: 'insidenav-slider-right-nav' },
+                  { onClick: _this._slideRight, className: 'insidenav-slider-right-nav' },
                   _react2.default.createElement('i', { className: 'fas fa-chevron-right' })
                 )
               )
@@ -985,10 +985,10 @@ var InsideNavSlider = function (_React$Component) {
         { width: '20px', height: '64px', viewBox: '0 0 20 64', version: '1.1', xmlns: 'http://www.w3.org/2000/svg' },
         _react2.default.createElement(
           'g',
-          { id: 'Page-1', stroke: 'none', 'stroke-width': '1', fill: 'none', 'fill-rule': 'evenodd' },
+          { id: 'Page-1', stroke: 'none', strokeWidth: '1', fill: 'none', fillRule: 'evenodd' },
           _react2.default.createElement(
             'g',
-            { id: 'Desktop-HD-Copy-22', transform: 'translate(-1174.000000, -1985.000000)', stroke: color, 'stroke-width': '2' },
+            { id: 'Desktop-HD-Copy-22', transform: 'translate(-1174.000000, -1985.000000)', stroke: color, strokeWidth: '2' },
             _react2.default.createElement(
               'g',
               { id: 'Group-13', transform: 'translate(1106.000000, 1976.375000)' },

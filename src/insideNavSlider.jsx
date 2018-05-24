@@ -912,8 +912,8 @@ export default class InsideNavSlider extends React.Component {
   renderBarraDaMaria(color) {
     return (
       <svg width="20px" height="64px" viewBox="0 0 20 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Desktop-HD-Copy-22" transform="translate(-1174.000000, -1985.000000)" stroke={color} stroke-width="2">
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g id="Desktop-HD-Copy-22" transform="translate(-1174.000000, -1985.000000)" stroke={color} strokeWidth="2">
             <g id="Group-13" transform="translate(1106.000000, 1976.375000)">
               <path d="M86.2699125,9.83540711 L69.6756984,71.765857" id="Path-5"></path>
             </g>
@@ -977,11 +977,11 @@ export default class InsideNavSlider extends React.Component {
               </div>
               <div className="meshapp-inside-nav-nav-wrapper" style={{ color: this.props.mobileTitleColor }}>
                 <div style={{ display: 'flex', flexDirection: 'row', textAlign: 'center', alignItems: 'center' }}>
-                  <p className='insidenav-slider-left-nav'><i className="fas fa-chevron-left"></i></p>
-                  <p className='insidenav-slider-firstnumber'>1</p>
+                  <p onClick={this._slideLeft} className='insidenav-slider-left-nav'><i className="fas fa-chevron-left"></i></p>
+                  <p className='insidenav-slider-firstnumber'>{this.state.currentIndex + 1}</p>
                   {this.renderBarraDaMaria(this.props.mobileTitleColor)}
-                  <p className='insidenav-slider-secondnumber'>4</p>
-                  <p className='insidenav-slider-right-nav'><i className="fas fa-chevron-right"></i></p>
+                  <p className='insidenav-slider-secondnumber'>{this.props.items.length}</p>
+                  <p onClick={this._slideRight} className='insidenav-slider-right-nav'><i className="fas fa-chevron-right"></i></p>
                 </div>
               </div>
             </div>
