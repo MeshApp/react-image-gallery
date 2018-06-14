@@ -230,6 +230,79 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 
 }
 
+.insidenav-slider-mobile-info {
+  display: none;
+  padding: 15px 5px 15px 5px;
+
+  .title {
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    p {
+      line-height: 1.3em;
+      word-break: normal;
+      white-space: normal;
+    }
+  }
+
+  .description {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    p {
+      line-height: 1.3em;
+      word-break: normal;
+      white-space: normal;
+    }
+  }
+
+  .inside-nav-mobile-index {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    .meshapp-inside-nav-nav-wrapper {
+      display: flex;
+      padding: 5px 5px 5px 20px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      p {
+        margin-right: 5px;
+      }
+      .insidenav-slider-left-nav {
+        font-size: 36px;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+      .insidenav-slider-right-nav {
+        font-size: 36px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      .insidenav-slider-firstnumber {
+        font-size: 36px;
+        font-weight: bold;
+        padding-bottom: 30px;
+      }
+      .insidenav-slider-secondnumber {
+        padding-top: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width: $ig-screen-sm-min) {
+      display: flex;
+      flex-direction: column; 
+    }
+
+}
+
 .image-gallery-slide {
   background: $ig-white;
   left: 0;

@@ -274,15 +274,15 @@ class App extends React.Component {
           showFullscreenButton={false}
           showPlayButton={false}
           showThumbnails={false}
-          showIndex={false}
+          showIndex={true}
           showNav={false}
           additionalClass="app-image-gallery"
           dotActiveColor={'red'}
           dotInactiveColor={'black'}
           arrowsColor={'red'}
           arrowsSize={'30px'}
-          mobileTitleColor={'white'}
-          mobileDescriptionColor={'white'}
+          mobileTitleColor={'red'}
+          mobileDescriptionColor={'blue'}
         />
 
         <div className='app-sandbox'>
