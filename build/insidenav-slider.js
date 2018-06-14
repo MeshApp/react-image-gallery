@@ -1224,23 +1224,56 @@ var InsideNavSlider = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'presentation-slider-mobile-info', style: { color: this.props.mobileTitleColor } },
+            { className: 'insidenav-slider-mobile-info' },
             _react2.default.createElement(
               'div',
               { className: 'title' },
               _react2.default.createElement(
                 'p',
-                null,
+                { style: { color: this.props.mobileTitleColor } },
                 this.props.items[this.state.currentIndex].title
               )
             ),
             _react2.default.createElement(
               'div',
-              { className: 'description', style: { color: this.props.mobileDescriptionColor } },
+              { className: 'description' },
               _react2.default.createElement(
                 'p',
-                null,
+                { style: { color: this.props.mobileDescriptionColor } },
                 this.props.items[this.state.currentIndex].description
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'inside-nav-mobile-index' },
+              _react2.default.createElement(
+                'div',
+                { className: 'meshapp-inside-nav-nav-wrapper', style: { color: this.props.mobileTitleColor } },
+                _react2.default.createElement(
+                  'div',
+                  { style: { display: 'flex', flexDirection: 'row', textAlign: 'center', alignItems: 'center' } },
+                  _react2.default.createElement(
+                    'p',
+                    { onClick: this._slideLeft, className: 'insidenav-slider-left-nav' },
+                    _react2.default.createElement('i', { className: 'fas fa-chevron-left' })
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    { className: 'insidenav-slider-firstnumber' },
+                    this.state.currentIndex + 1
+                  ),
+                  this.renderBarraDaMaria(this.props.mobileTitleColor),
+                  _react2.default.createElement(
+                    'p',
+                    { className: 'insidenav-slider-secondnumber' },
+                    this.props.items.length
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    { onClick: this._slideRight, className: 'insidenav-slider-right-nav' },
+                    _react2.default.createElement('i', { className: 'fas fa-chevron-right' })
+                  )
+                )
               )
             )
           ),
