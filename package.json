@@ -1,6 +1,6 @@
 {
   "name": "react-image-gallery",
-  "version": "0.8.26",
+  "version": "0.8.27",
   "description": "React carousel image gallery component with thumbnail and mobile support",
   "main": "./build",
   "scripts": {

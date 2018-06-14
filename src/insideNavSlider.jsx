@@ -952,7 +952,7 @@ export default class InsideNavSlider extends React.Component {
             </picture>
             :
             <img
-              src={item.original}
+              src={item.original && item.original !== '' ? item.original : 'https://cdn.meshapp.tech/meshapp/meshapp1000_500_placeholder.png'}
               alt={item.originalAlt}
               srcSet={item.srcSet}
               sizes={item.sizes}

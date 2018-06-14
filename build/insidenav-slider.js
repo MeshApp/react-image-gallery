@@ -278,7 +278,7 @@ var InsideNavSlider = function (_React$Component) {
             src: item.original
           })
         ) : _react2.default.createElement('img', {
-          src: item.original,
+          src: item.original && item.original !== '' ? item.original : 'https://cdn.meshapp.tech/meshapp/meshapp1000_500_placeholder.png',
           alt: item.originalAlt,
           srcSet: item.srcSet,
           sizes: item.sizes,

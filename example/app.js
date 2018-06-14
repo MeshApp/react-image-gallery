@@ -29,9 +29,10 @@ class App extends React.Component {
     };
     this.presentationClicked = this.presentationClicked.bind(this)
     // titulo 150 description 250
+    //
     this.presentationImages = [
       { original: 'https://www.planwallpaper.com/static/images/4442617-hd-wallpapers.jpg', title: 'title1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero ola', description: 'description1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero pretium ut. Aliquam ac placerat orci. Suspendisse potenti. Integer in nisl turpis. In suscipit ve' },
-      { original: 'https://9cover.com/images/ccovers/1365343343cute-cat-in-the-city.jpg', title: 'title2', description: 'description2' },
+      { original: '', title: 'title2', description: 'description2' },
       { original: 'https://www.pixelstalk.net/wp-content/uploads/2016/07/3D-HD-Nature-Images-Free-Download.jpg', title: 'title3', description: 'description3' },
       { original: 'https://www.hd-wallpapersdownload.com/script/bulk-upload/hd-computer-hd-wallpapers-3D.jpg', title: 'title4', description: 'description4' },
       { original: 'http://livewallpaperswide.com/wp-content/uploads/2017/01/wallpaper-hd-1080p-1.jpg', title: 'title5', description: 'description5' }
@@ -274,7 +275,7 @@ class App extends React.Component {
           showFullscreenButton={false}
           showPlayButton={false}
           showThumbnails={false}
-          showIndex={true}
+          showIndex={false}
           showNav={false}
           additionalClass="app-image-gallery"
           dotActiveColor={'red'}
