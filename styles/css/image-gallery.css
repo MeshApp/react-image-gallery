@@ -210,7 +210,8 @@
     position: relative; }
   .image-gallery-slide img {
     width: 100%;
-    max-height: 500px; }
+    max-height: 500px;
+    object-fit: cover; }
   .image-gallery-slide .meshapp-info-wrapper {
     top: 0px;
     display: flex;
