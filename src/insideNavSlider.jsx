@@ -926,7 +926,7 @@ export default class InsideNavSlider extends React.Component {
   _renderItem = (item) => {
     const onImageError = this.props.onImageError || this._handleImageError;
 
-    let clickStyle = this.props.onSliderClick ? { cursor: 'pointer' } : {}
+    let clickStyle = this.props.onSliderClick ? { cursor: 'pointer', maxHeight: '500px' } : { maxHeight: '500px' }
 
     return (
       <div className='image-gallery-image' style={clickStyle} onClick={() => this.sliderClicked(item)}>

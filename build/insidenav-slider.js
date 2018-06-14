@@ -253,7 +253,7 @@ var InsideNavSlider = function (_React$Component) {
     _this._renderItem = function (item) {
       var onImageError = _this.props.onImageError || _this._handleImageError;
 
-      var clickStyle = _this.props.onSliderClick ? { cursor: 'pointer' } : {};
+      var clickStyle = _this.props.onSliderClick ? { cursor: 'pointer', maxHeight: '500px' } : { maxHeight: '500px' };
 
       return _react2.default.createElement(
         'div',
