@@ -299,7 +299,7 @@ var InsideNavSlider = function (_React$Component) {
             { className: 'meshapp-inside-nav-description-wrapper' },
             _react2.default.createElement(
               'div',
-              { className: 'meshapp-inside-nav-description', style: { color: _this.props.mobileDescriptionColor } },
+              { className: 'meshapp-inside-nav-description', style: { color: _this.props.mobileTitleColor } },
               item.description
             ),
             _react2.default.createElement(
@@ -1230,7 +1230,7 @@ var InsideNavSlider = function (_React$Component) {
               { className: 'title' },
               _react2.default.createElement(
                 'p',
-                { style: { color: this.props.mobileTitleColor } },
+                { style: { color: this.props.mobileDescriptionColor } },
                 this.props.items[this.state.currentIndex].title
               )
             ),
@@ -1248,7 +1248,7 @@ var InsideNavSlider = function (_React$Component) {
               { className: 'inside-nav-mobile-index' },
               _react2.default.createElement(
                 'div',
-                { className: 'meshapp-inside-nav-nav-wrapper', style: { color: this.props.mobileTitleColor } },
+                { className: 'meshapp-inside-nav-nav-wrapper', style: { color: this.props.mobileDescriptionColor } },
                 _react2.default.createElement(
                   'div',
                   { style: { display: 'flex', flexDirection: 'row', textAlign: 'center', alignItems: 'center' } },
@@ -1262,7 +1262,7 @@ var InsideNavSlider = function (_React$Component) {
                     { className: 'insidenav-slider-firstnumber' },
                     this.state.currentIndex + 1
                   ),
-                  this.renderBarraDaMaria(this.props.mobileTitleColor),
+                  this.renderBarraDaMaria(this.props.mobileDescriptionColor),
                   _react2.default.createElement(
                     'p',
                     { className: 'insidenav-slider-secondnumber' },

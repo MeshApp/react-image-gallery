@@ -972,7 +972,7 @@ export default class InsideNavSlider extends React.Component {
           {
             item.description &&
             <div className="meshapp-inside-nav-description-wrapper">
-              <div className='meshapp-inside-nav-description' style={{ color: this.props.mobileDescriptionColor }}>
+              <div className='meshapp-inside-nav-description' style={{ color: this.props.mobileTitleColor }}>
                 {item.description}
               </div>
               <div className="meshapp-inside-nav-nav-wrapper" style={{ color: this.props.mobileTitleColor }}>
@@ -1250,17 +1250,17 @@ export default class InsideNavSlider extends React.Component {
           }
           {<div className='insidenav-slider-mobile-info'>
             <div className='title'>
-              <p style={{ color: this.props.mobileTitleColor }}>{this.props.items[this.state.currentIndex].title}</p>
+              <p style={{ color: this.props.mobileDescriptionColor }}>{this.props.items[this.state.currentIndex].title}</p>
             </div>
             <div className='description'>
               <p style={{ color: this.props.mobileDescriptionColor }}>{this.props.items[this.state.currentIndex].description}</p>
             </div>
             <div className="inside-nav-mobile-index">
-              <div className="meshapp-inside-nav-nav-wrapper" style={{ color: this.props.mobileTitleColor }}>
+              <div className="meshapp-inside-nav-nav-wrapper" style={{ color: this.props.mobileDescriptionColor }}>
                 <div style={{ display: 'flex', flexDirection: 'row', textAlign: 'center', alignItems: 'center' }}>
                   <p onClick={this._slideLeft} className='insidenav-slider-left-nav'><i className="fas fa-chevron-left"></i></p>
                   <p className='insidenav-slider-firstnumber'>{this.state.currentIndex + 1}</p>
-                  {this.renderBarraDaMaria(this.props.mobileTitleColor)}
+                  {this.renderBarraDaMaria(this.props.mobileDescriptionColor)}
                   <p className='insidenav-slider-secondnumber'>{this.props.items.length}</p>
                   <p onClick={this._slideRight} className='insidenav-slider-right-nav'><i className="fas fa-chevron-right"></i></p>
                 </div>
