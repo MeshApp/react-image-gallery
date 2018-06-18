@@ -306,8 +306,9 @@
     position: absolute;
     width: 100%; }
     .image-gallery-slide .meshapp-insidenav-info-wrapper .meshapp-inside-nav-title {
-      font-size: 25px;
-      font-weight: bold;
+      font-size: 36px;
+      font-weight: 400;
+      text-transform: uppercase;
       line-height: 1;
       padding: 20px;
       display: flex;
@@ -323,12 +324,12 @@
       justify-content: space-between;
       width: 100%; }
       .image-gallery-slide .meshapp-insidenav-info-wrapper .meshapp-inside-nav-description-wrapper .meshapp-inside-nav-description {
-        line-height: 1;
+        line-height: 25px;
         padding-left: 20px;
         font-size: 20px;
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: 60%;
         padding: 5px 5px 5px 20px;
         white-space: normal;
         text-align: left; }
