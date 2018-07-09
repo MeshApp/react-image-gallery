@@ -297,11 +297,7 @@ var InsideNavSlider = function (_React$Component) {
           item.description && _react2.default.createElement(
             'div',
             { className: 'meshapp-inside-nav-description-wrapper' },
-            _react2.default.createElement(
-              'div',
-              { className: 'meshapp-inside-nav-description', style: { color: _this.props.mobileTitleColor } },
-              item.description
-            ),
+            _react2.default.createElement('div', { className: 'meshapp-inside-nav-description', style: { color: _this.props.mobileTitleColor }, dangerouslySetInnerHTML: _this.createMarkup(item.description) }),
             _react2.default.createElement(
               'div',
               { className: 'meshapp-inside-nav-nav-wrapper', style: { color: _this.props.mobileTitleColor } },
@@ -466,6 +462,11 @@ var InsideNavSlider = function (_React$Component) {
       if (this._resizeTimer) {
         window.clearTimeout(this._resizeTimer);
       }
+    }
+  }, {
+    key: 'createMarkup',
+    value: function createMarkup(html) {
+      return { __html: html };
     }
   }, {
     key: 'play',
@@ -1237,11 +1238,7 @@ var InsideNavSlider = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'description' },
-              _react2.default.createElement(
-                'p',
-                { style: { color: this.props.mobileDescriptionColor } },
-                this.props.items[this.state.currentIndex].description
-              )
+              _react2.default.createElement('div', { style: { color: this.props.mobileDescriptionColor }, dangerouslySetInnerHTML: this.createMarkup(this.props.items[this.state.currentIndex].description) })
             ),
             _react2.default.createElement(
               'div',
