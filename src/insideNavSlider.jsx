@@ -976,7 +976,7 @@ export default class InsideNavSlider extends React.Component {
           {
             item.description &&
             <div className="meshapp-inside-nav-description-wrapper">
-              <div className='meshapp-inside-nav-description' style={{ color: this.props.mobileTitleColor }} dangerouslySetInnerHTML={this.createMarkup(item.description)}>
+              <div className='meshapp-inside-nav-description' style={{ color: this.props.mobileTitleColor }} dangerouslySetInnerHTML={this.createMarkup(item.description.replace(/<img .*?>/g, ""))}>
               </div>
               <div className="meshapp-inside-nav-nav-wrapper" style={{ color: this.props.mobileTitleColor }}>
                 <div style={{ display: 'flex', flexDirection: 'row', textAlign: 'center', alignItems: 'center' }}>
@@ -1256,7 +1256,7 @@ export default class InsideNavSlider extends React.Component {
               <p style={{ color: this.props.mobileDescriptionColor }}>{this.props.items[this.state.currentIndex].title}</p>
             </div>
             <div className='description'>
-              <div style={{ color: this.props.mobileDescriptionColor }} dangerouslySetInnerHTML={this.createMarkup(this.props.items[this.state.currentIndex].description)}></div>
+              <div style={{ color: this.props.mobileDescriptionColor }} dangerouslySetInnerHTML={this.createMarkup(this.props.items[this.state.currentIndex].description.replace(/<img .*?>/g, ""))}></div>
             </div>
             <div className="inside-nav-mobile-index">
               <div className="meshapp-inside-nav-nav-wrapper" style={{ color: this.props.mobileDescriptionColor }}>

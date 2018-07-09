@@ -33,7 +33,7 @@ class App extends React.Component {
     this.presentationImages = [
       { original: 'https://www.planwallpaper.com/static/images/4442617-hd-wallpapers.jpg', title: 'title1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero ola', description: 'description1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero pretium ut. Aliquam ac placerat orci. Suspendisse potenti. Integer in nisl turpis. In suscipit ve' },
       { original: '', title: 'title2', description: 'description2' },
-      { original: 'https://www.pixelstalk.net/wp-content/uploads/2016/07/3D-HD-Nature-Images-Free-Download.jpg', title: 'title3', description: 'description3' },
+      { original: '', title: 'title3', description: '<html><head></head><body><img data-id="83031d32-e858-4d4b-beb8-47e39c632868" src="https://grafly.cdn.meshapp.tech/_grafly/catalog/generated/2018/06/43/2ab6b47fc/image1024x768.jpg" alt="black " style="margin: 0px auto 2rem; display: block;"> <p class="empty"><br></p><ul><li>To make Cascais the best place to live for a day or a lifetime</li></ul><p>Through innnovative public policies and territorial management, attracting leading investments, fostering and managing knowledge, preservation of natural ressources and heritage, engagin citizen participation and intelligent use of technology.</p></body></html>' },
       { original: 'https://www.hd-wallpapersdownload.com/script/bulk-upload/hd-computer-hd-wallpapers-3D.jpg', title: 'title4', description: 'description4' },
       { original: 'http://livewallpaperswide.com/wp-content/uploads/2017/01/wallpaper-hd-1080p-1.jpg', title: 'title5', description: 'description5' }
     ]
@@ -282,7 +282,7 @@ class App extends React.Component {
           dotInactiveColor={'black'}
           arrowsColor={'red'}
           arrowsSize={'30px'}
-          mobileTitleColor={'red'}
+          mobileTitleColor={'black'}
           mobileDescriptionColor={'blue'}
         />
 
