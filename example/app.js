@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ImageGallery from '../src/ImageGallery';
 import PresentationSlider from '../src/presentationSlider';
 import InsideNavSlider from '../src/insideNavSlider';
+import AndromedaBannerSlider from '../src/andromedaBannerSlider';
 
 const PREFIX_URL = 'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
 
@@ -259,7 +260,7 @@ class App extends React.Component {
         />
         <div style={{ padding: '10px 0px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           MESHAPP - Andromeda Inside Nav Slider
-      </div>
+        </div>
         <InsideNavSlider
           ref={i => this._imageGallery = i}
           items={this.presentationImages}
@@ -284,6 +285,33 @@ class App extends React.Component {
           arrowsSize={'30px'}
           mobileTitleColor={'black'}
           mobileDescriptionColor={'blue'}
+        />
+        <div style={{ padding: '10px 0px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          MESHAPP - Andromeda Banner Slider
+        </div>
+        <AndromedaBannerSlider
+          ref={i => this._imageGallery = i}
+          items={this.presentationImages}
+          lazyLoad={false}
+          onClick={this._onImageClick.bind(this)}
+          onImageLoad={this._onImageLoad}
+          onSlide={this._onSlide.bind(this)}
+          onPause={this._onPause.bind(this)}
+          onScreenChange={this._onScreenChange.bind(this)}
+          onPlay={this._onPlay.bind(this)}
+          infinite={this.state.infinite}
+          showBullets={true}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showThumbnails={false}
+          showIndex={false}
+          showNav={false}
+          additionalClass="app-image-gallery"
+          dotActiveColor={'red'}
+          dotInactiveColor={'black'}
+          arrowsColor={'red'}
+          arrowsSize={'30px'}
+          onSliderClick={this.presentationClicked}
         />
 
         <div className='app-sandbox'>

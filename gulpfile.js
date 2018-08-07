@@ -95,6 +95,13 @@ gulp.task('source-js3', function () {
     .pipe(gulp.dest('./build'));
 });
 
+gulp.task('source-js4', function () {
+  return gulp.src('./src/andromedaBannerSlider.jsx')
+    .pipe(concat('andromeda-banner-slider.js'))
+    .pipe(babel(babelOptions))
+    .pipe(gulp.dest('./build'));
+});
+
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch(['styles/**/*.scss'], ['sass']);
