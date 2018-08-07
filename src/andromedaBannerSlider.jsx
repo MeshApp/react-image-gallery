@@ -11,7 +11,7 @@ const screenChangeEvents = [
   'webkitfullscreenchange'
 ];
 
-export default class PresentationSlider extends React.Component {
+export default class AndromedaBannerSlider extends React.Component {
 
   constructor(props) {
     super(props);
