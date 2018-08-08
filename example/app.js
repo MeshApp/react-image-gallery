@@ -310,7 +310,7 @@ class App extends React.Component {
           dotInactiveColor={'black'}
           arrowsColor={'red'}
           arrowsSize={'30px'}
-          fontSize={'50'}
+          fontSize={'16'}
           titleColor={'white'}
           descriptionColor={'white'}
           onSliderClick={this.presentationClicked}

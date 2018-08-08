@@ -294,10 +294,10 @@ var AndromedaBannerSlider = function (_React$Component) {
             { className: 'meshapp-info-wrapper' },
             item.title && _react2.default.createElement(
               'h2',
-              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor, fontSize: _this.props.fontSize + 'px' } },
+              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor, fontSize: _this.props.fontSize * 3.2 + 'px' } },
               item.title
             ),
-            item.description && _react2.default.createElement('p', { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: _this.props.fontSize * 0.32 + 'px' },
+            item.description && _react2.default.createElement('p', { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: _this.props.fontSize + 'px' },
               dangerouslySetInnerHTML: _this.createMarkup(item.description) })
           )
         )
@@ -1304,7 +1304,7 @@ AndromedaBannerSlider.defaultProps = {
   dotInactiveColor: 'white',
   titleColor: 'white',
   descriptionColor: 'black',
-  fontSize: '50',
+  fontSize: '16',
   renderLeftNav: function renderLeftNav(onClick, disabled, arrowsColor, arrowsSize) {
     return _react2.default.createElement('button', {
       type: 'button',

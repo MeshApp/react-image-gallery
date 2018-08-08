@@ -125,7 +125,7 @@ export default class AndromedaBannerSlider extends React.Component {
     dotInactiveColor: 'white',
     titleColor: 'white',
     descriptionColor: 'black',
-    fontSize: '50',
+    fontSize: '16',
     renderLeftNav: (onClick, disabled, arrowsColor, arrowsSize) => {
       return (
         <button
@@ -957,13 +957,13 @@ export default class AndromedaBannerSlider extends React.Component {
           {<div className='meshapp-info-wrapper'>
             {
               item.title &&
-              <h2 className='meshapp-image-gallery-title' style={{ color: this.props.titleColor, fontSize: this.props.fontSize + 'px' }}>
+              <h2 className='meshapp-image-gallery-title' style={{ color: this.props.titleColor, fontSize: this.props.fontSize * 3.2 + 'px' }}>
                 {item.title}
               </h2>
             }
             {
               item.description &&
-              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor, fontSize: this.props.fontSize * 0.32 + 'px' }}
+              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor, fontSize: this.props.fontSize + 'px' }}
                 dangerouslySetInnerHTML={this.createMarkup(item.description)}>
               </p>
             }
