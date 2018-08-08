@@ -3,6 +3,7 @@ import Swipeable from 'react-swipeable';
 import throttle from 'lodash.throttle';
 import debounce from 'lodash.debounce';
 import PropTypes from 'prop-types';
+import { log } from 'util';
 
 const screenChangeEvents = [
   'fullscreenchange',
