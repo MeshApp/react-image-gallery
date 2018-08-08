@@ -89,7 +89,7 @@ export default class AndromedaBannerSlider extends React.Component {
     onSliderClick: PropTypes.func,
     titleColor: PropTypes.string,
     descriptionColor: PropTypes.string,
-    fontSize: PropTypes.string
+    fontSize: PropTypes.number
   };
 
   static defaultProps = {
@@ -125,7 +125,7 @@ export default class AndromedaBannerSlider extends React.Component {
     dotInactiveColor: 'white',
     titleColor: 'white',
     descriptionColor: 'black',
-    fontSize: '16',
+    fontSize: 16,
     renderLeftNav: (onClick, disabled, arrowsColor, arrowsSize) => {
       return (
         <button

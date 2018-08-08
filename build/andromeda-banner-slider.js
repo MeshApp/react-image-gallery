@@ -1267,7 +1267,7 @@ AndromedaBannerSlider.propTypes = {
   onSliderClick: _propTypes2.default.func,
   titleColor: _propTypes2.default.string,
   descriptionColor: _propTypes2.default.string,
-  fontSize: _propTypes2.default.string
+  fontSize: _propTypes2.default.number
 };
 AndromedaBannerSlider.defaultProps = {
   items: [],
@@ -1302,7 +1302,7 @@ AndromedaBannerSlider.defaultProps = {
   dotInactiveColor: 'white',
   titleColor: 'white',
   descriptionColor: 'black',
-  fontSize: '16',
+  fontSize: 16,
   renderLeftNav: function renderLeftNav(onClick, disabled, arrowsColor, arrowsSize) {
     return _react2.default.createElement('button', {
       type: 'button',
