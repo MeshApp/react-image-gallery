@@ -294,10 +294,10 @@ var AndromedaBannerSlider = function (_React$Component) {
             { className: 'meshapp-info-wrapper' },
             item.title && _react2.default.createElement(
               'h2',
-              { className: 'meshapp-image-gallery-title', style: { color: _this.props.mobileTitleColor } },
+              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor, fontSize: _this.props.fontSize + 'px' } },
               item.title
             ),
-            item.description && _react2.default.createElement('p', { className: 'meshapp-image-gallery-description', style: { color: _this.props.mobileDescriptionColor },
+            item.description && _react2.default.createElement('p', { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: _this.props.fontSize * 0.32 + 'px' },
               dangerouslySetInnerHTML: _this.createMarkup(item.description) })
           )
         )
@@ -1171,7 +1171,7 @@ var AndromedaBannerSlider = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'presentation-slider-mobile-info', style: { color: this.props.mobileTitleColor } },
+            { className: 'presentation-slider-mobile-info', style: { color: this.props.titleColor } },
             _react2.default.createElement(
               'div',
               { className: 'title' },
@@ -1183,7 +1183,7 @@ var AndromedaBannerSlider = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'description', style: { color: this.props.mobileDescriptionColor } },
+              { className: 'description', style: { color: this.props.descriptionColor } },
               _react2.default.createElement(
                 'p',
                 null,
@@ -1267,8 +1267,9 @@ AndromedaBannerSlider.propTypes = {
   dotActiveColor: _propTypes2.default.string,
   dotInactiveColor: _propTypes2.default.string,
   onSliderClick: _propTypes2.default.func,
-  mobileTitleColor: _propTypes2.default.string,
-  mobileDescriptionColor: _propTypes2.default.string
+  titleColor: _propTypes2.default.string,
+  descriptionColor: _propTypes2.default.string,
+  fontSize: _propTypes2.default.string
 };
 AndromedaBannerSlider.defaultProps = {
   items: [],
@@ -1301,8 +1302,9 @@ AndromedaBannerSlider.defaultProps = {
   arrowsSize: '40px',
   dotActiveColor: 'black',
   dotInactiveColor: 'white',
-  mobileTitleColor: 'white',
-  mobileDescriptionColor: 'black',
+  titleColor: 'white',
+  descriptionColor: 'black',
+  fontSize: '50',
   renderLeftNav: function renderLeftNav(onClick, disabled, arrowsColor, arrowsSize) {
     return _react2.default.createElement('button', {
       type: 'button',

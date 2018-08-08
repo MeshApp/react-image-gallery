@@ -87,8 +87,9 @@ export default class AndromedaBannerSlider extends React.Component {
     dotActiveColor: PropTypes.string,
     dotInactiveColor: PropTypes.string,
     onSliderClick: PropTypes.func,
-    mobileTitleColor: PropTypes.string,
-    mobileDescriptionColor: PropTypes.string,
+    titleColor: PropTypes.string,
+    descriptionColor: PropTypes.string,
+    fontSize: PropTypes.string
   };
 
   static defaultProps = {
@@ -122,8 +123,9 @@ export default class AndromedaBannerSlider extends React.Component {
     arrowsSize: '40px',
     dotActiveColor: 'black',
     dotInactiveColor: 'white',
-    mobileTitleColor: 'white',
-    mobileDescriptionColor: 'black',
+    titleColor: 'white',
+    descriptionColor: 'black',
+    fontSize: '50',
     renderLeftNav: (onClick, disabled, arrowsColor, arrowsSize) => {
       return (
         <button
@@ -955,13 +957,13 @@ export default class AndromedaBannerSlider extends React.Component {
           {<div className='meshapp-info-wrapper'>
             {
               item.title &&
-              <h2 className='meshapp-image-gallery-title' style={{ color: this.props.mobileTitleColor }}>
+              <h2 className='meshapp-image-gallery-title' style={{ color: this.props.titleColor, fontSize: this.props.fontSize + 'px' }}>
                 {item.title}
               </h2>
             }
             {
               item.description &&
-              <p className='meshapp-image-gallery-description' style={{ color: this.props.mobileDescriptionColor }}
+              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor, fontSize: this.props.fontSize * 0.32 + 'px' }}
                 dangerouslySetInnerHTML={this.createMarkup(item.description)}>
               </p>
             }
@@ -1222,11 +1224,11 @@ export default class AndromedaBannerSlider extends React.Component {
               </div>
             </div>
           }
-          {<div className='presentation-slider-mobile-info' style={{ color: this.props.mobileTitleColor }}>
+          {<div className='presentation-slider-mobile-info' style={{ color: this.props.titleColor }}>
             <div className='title'>
               <p>{this.props.items[this.state.currentIndex].title}</p>
             </div>
-            <div className='description' style={{ color: this.props.mobileDescriptionColor }}>
+            <div className='description' style={{ color: this.props.descriptionColor }}>
               <p>{this.props.items[this.state.currentIndex].description}</p>
             </div>
           </div>}
