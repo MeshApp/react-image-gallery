@@ -54,6 +54,32 @@
     .image-gallery.fullscreen-modal .image-gallery-content {
       top: 50%;
       transform: translateY(-50%); }
+  .image-gallery.andromeda-banner-slider {
+    width: 100% !important;
+    padding: 0; }
+    .image-gallery.andromeda-banner-slider .container {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    .image-gallery.andromeda-banner-slider .meshapp-info-wrapper {
+      position: relative;
+      display: block;
+      max-width: 500px;
+      height: 60%;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
+        font-size: 50px; }
+      .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-description {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2; }
+    .image-gallery.andromeda-banner-slider .presentation-slider-bullets {
+      justify-content: center;
+      bottom: 15%;
+      position: absolute; }
 
 .image-gallery-content {
   position: relative;
