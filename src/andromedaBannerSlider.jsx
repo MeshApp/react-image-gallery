@@ -911,10 +911,6 @@ export default class AndromedaBannerSlider extends React.Component {
     this.slideToIndex(this.state.currentIndex + 1, event);
   };
 
-  createMarkup(html) {
-    return { __html: html }
-  }
-
   _renderItem = (item) => {
     const onImageError = this.props.onImageError || this._handleImageError;
 
@@ -963,8 +959,8 @@ export default class AndromedaBannerSlider extends React.Component {
             }
             {
               item.description &&
-              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor, fontSize: this.props.fontSize + 'px' }}
-                dangerouslySetInnerHTML={this.createMarkup(item.description)}>
+              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor, fontSize: this.props.fontSize + 'px' }}>
+                {item.description}
               </p>
             }
           </div>}
