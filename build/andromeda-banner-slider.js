@@ -288,16 +288,20 @@ var AndromedaBannerSlider = function (_React$Component) {
         }),
         _react2.default.createElement(
           'div',
-          { className: 'meshapp-info-wrapper' },
-          item.title && _react2.default.createElement(
+          { className: 'container' },
+          _react2.default.createElement(
             'div',
-            { className: 'meshapp-image-gallery-title', style: { color: _this.props.mobileTitleColor } },
-            item.title
-          ),
-          item.description && _react2.default.createElement(
-            'div',
-            { className: 'meshapp-image-gallery-description', style: { color: _this.props.mobileDescriptionColor } },
-            item.description
+            { className: 'meshapp-info-wrapper' },
+            item.title && _react2.default.createElement(
+              'div',
+              { className: 'meshapp-image-gallery-title', style: { color: _this.props.mobileTitleColor } },
+              item.title
+            ),
+            item.description && _react2.default.createElement(
+              'div',
+              { className: 'meshapp-image-gallery-description', style: { color: _this.props.mobileDescriptionColor } },
+              item.description
+            )
           )
         )
       );
@@ -1065,12 +1069,7 @@ var AndromedaBannerSlider = function (_React$Component) {
         this.props.renderCustomControls && this.props.renderCustomControls(),
         this.props.showFullscreenButton && this.props.renderFullscreenButton(this._toggleFullScreen, isFullscreen),
         this.props.showPlayButton && this.props.renderPlayPauseButton(this._togglePlay, isPlaying),
-        this._canNavigate() ? [this.props.showNav && _react2.default.createElement(
-          'span',
-          { key: 'navigation' },
-          this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor, this.props.arrowsSize),
-          this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor, this.props.arrowsSize)
-        ), this.props.disableSwipe ? _react2.default.createElement(
+        this._canNavigate() ? [this.props.disableSwipe ? _react2.default.createElement(
           'div',
           { className: 'image-gallery-slides', key: 'slides' },
           slides
@@ -1121,7 +1120,7 @@ var AndromedaBannerSlider = function (_React$Component) {
         )
       );
 
-      var classNames = ['image-gallery', this.props.additionalClass, modalFullscreen ? 'fullscreen-modal' : ''].filter(function (name) {
+      var classNames = ['image-gallery andromeda-banner-slider', this.props.additionalClass, modalFullscreen ? 'fullscreen-modal' : ''].filter(function (name) {
         return typeof name === 'string';
       }).join(' ');
 
@@ -1195,22 +1194,12 @@ var AndromedaBannerSlider = function (_React$Component) {
             { className: 'presentation-slider-bullets' },
             _react2.default.createElement(
               'div',
-              { className: 'leftNav' },
-              this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor, this.props.arrowsSize)
-            ),
-            _react2.default.createElement(
-              'div',
               {
                 className: 'presentation-slider-bullets-container',
                 role: 'navigation',
                 'aria-label': 'Bullet Navigation'
               },
               bullets
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'rightNav' },
-              this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor, this.props.arrowsSize)
             )
           ),
           (thumbnailPosition === 'top' || thumbnailPosition === 'left') && slideWrapper

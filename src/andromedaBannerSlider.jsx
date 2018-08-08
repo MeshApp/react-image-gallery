@@ -947,21 +947,22 @@ export default class AndromedaBannerSlider extends React.Component {
               onError={onImageError}
             />
         }
-
-        {<div className='meshapp-info-wrapper'>
-          {
-            item.title &&
-            <div className='meshapp-image-gallery-title' style={{ color: this.props.mobileTitleColor }}>
-              {item.title}
-            </div>
-          }
-          {
-            item.description &&
-            <div className='meshapp-image-gallery-description' style={{ color: this.props.mobileDescriptionColor }}>
-              {item.description}
-            </div>
-          }
-        </div>}
+        <div className="container">
+          {<div className='meshapp-info-wrapper'>
+            {
+              item.title &&
+              <div className='meshapp-image-gallery-title' style={{ color: this.props.mobileTitleColor }}>
+                {item.title}
+              </div>
+            }
+            {
+              item.description &&
+              <div className='meshapp-image-gallery-description' style={{ color: this.props.mobileDescriptionColor }}>
+                {item.description}
+              </div>
+            }
+          </div>}
+        </div>
       </div>
     );
   };
@@ -1129,12 +1130,6 @@ export default class AndromedaBannerSlider extends React.Component {
         {
           this._canNavigate() ?
             [
-              this.props.showNav &&
-              <span key='navigation'>
-                {this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor, this.props.arrowsSize)}
-                {this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor, this.props.arrowsSize)}
-              </span>,
-
               this.props.disableSwipe ?
                 <div className='image-gallery-slides' key='slides'>
                   {slides}
@@ -1182,7 +1177,7 @@ export default class AndromedaBannerSlider extends React.Component {
     );
 
     const classNames = [
-      'image-gallery',
+      'image-gallery andromeda-banner-slider',
       this.props.additionalClass,
       modalFullscreen ? 'fullscreen-modal' : '',
     ].filter(name => typeof name === 'string').join(' ');
@@ -1234,18 +1229,12 @@ export default class AndromedaBannerSlider extends React.Component {
           {
             this.props.showBullets &&
             <div className='presentation-slider-bullets'>
-              <div className='leftNav'>
-                {this.props.renderLeftNav(slideLeft, !this._canSlideLeft(), this.props.arrowsColor, this.props.arrowsSize)}
-              </div>
               <div
                 className='presentation-slider-bullets-container'
                 role='navigation'
                 aria-label='Bullet Navigation'
               >
                 {bullets}
-              </div>
-              <div className='rightNav'>
-                {this.props.renderRightNav(slideRight, !this._canSlideRight(), this.props.arrowsColor, this.props.arrowsSize)}
               </div>
             </div>
           }

@@ -32,7 +32,7 @@ class App extends React.Component {
     // titulo 150 description 250
     //
     this.presentationImages = [
-      { original: 'https://www.planwallpaper.com/static/images/4442617-hd-wallpapers.jpg', title: 'title1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero ola', description: 'description1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero pretium ut. Aliquam ac placerat orci. Suspendisse potenti. Integer in nisl turpis. In suscipit ve' },
+      { original: 'https://www.planwallpaper.com/static/images/4442617-hd-wallpapers.jpg', title: 'title1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', description: 'description1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta iaculis ultrices. Nulla egestas sagittis urna, quis varius libero pretium ut. Aliquam ac placerat orci. Suspendisse potenti. Integer in nisl turpis. In suscipit ve' },
       { original: '', title: 'title2', description: 'description2' },
       { original: '', title: 'title3', description: '<html><head></head><body><img data-id="83031d32-e858-4d4b-beb8-47e39c632868" src="https://grafly.cdn.meshapp.tech/_grafly/catalog/generated/2018/06/43/2ab6b47fc/image1024x768.jpg" alt="black " style="margin: 0px auto 2rem; display: block;"> <p class="empty"><br></p><ul><li>To make Cascais the best place to live for a day or a lifetime</li></ul><p>Through innnovative public policies and territorial management, attracting leading investments, fostering and managing knowledge, preservation of natural ressources and heritage, engagin citizen participation and intelligent use of technology.</p></body></html>' },
       { original: 'https://www.hd-wallpapersdownload.com/script/bulk-upload/hd-computer-hd-wallpapers-3D.jpg', title: 'title4', description: 'description4' },
@@ -305,7 +305,6 @@ class App extends React.Component {
           showPlayButton={false}
           showThumbnails={false}
           showIndex={false}
-          showNav={false}
           additionalClass="app-image-gallery"
           dotActiveColor={'red'}
           dotInactiveColor={'black'}
