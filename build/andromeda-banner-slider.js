@@ -297,8 +297,11 @@ var AndromedaBannerSlider = function (_React$Component) {
               { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor, fontSize: _this.props.fontSize * 3.2 + 'px' } },
               item.title
             ),
-            item.description && _react2.default.createElement('p', { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: _this.props.fontSize + 'px' },
-              dangerouslySetInnerHTML: _this.createMarkup(item.description) })
+            item.description && _react2.default.createElement(
+              'p',
+              { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: _this.props.fontSize + 'px' } },
+              item.description
+            )
           )
         )
       );
@@ -944,11 +947,6 @@ var AndromedaBannerSlider = function (_React$Component) {
         OTransform: translate,
         transform: translate
       };
-    }
-  }, {
-    key: 'createMarkup',
-    value: function createMarkup(html) {
-      return { __html: html };
     }
   }, {
     key: 'render',
