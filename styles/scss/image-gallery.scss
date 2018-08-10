@@ -61,12 +61,20 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 
       .meshapp-image-gallery-title {
         font-size: $title-font-size;
+
+        @media (max-width: $ig-screen-sm-min) {
+          display: block;
+        }
       }
 
       .meshapp-image-gallery-description{
         font-size: $title-font-size * 0.32;
         font-weight: 600;
         line-height: 1.2;
+
+        @media (max-width: $ig-screen-sm-min) {
+          display: block;
+        }
       }
     }
 

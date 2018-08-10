@@ -72,10 +72,16 @@
       text-overflow: ellipsis; }
       .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
         font-size: 50px; }
+        @media (max-width: 768px) {
+          .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
+            display: block; } }
       .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-description {
         font-size: 16px;
         font-weight: 600;
         line-height: 1.2; }
+        @media (max-width: 768px) {
+          .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-description {
+            display: block; } }
     .image-gallery.andromeda-banner-slider .presentation-slider-bullets {
       justify-content: center;
       bottom: 15%;
