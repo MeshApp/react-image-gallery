@@ -490,12 +490,12 @@ export default class AndromedaBannerSlider extends React.Component {
 
     switch (key) {
       case LEFT_ARROW:
-        if (this._canSlideLeft() && !this._intervalId) {
+        if (this._canSlideLeft()) {
           this._slideLeft();
         }
         break;
       case RIGHT_ARROW:
-        if (this._canSlideRight() && !this._intervalId) {
+        if (this._canSlideRight()) {
           this._slideRight();
         }
         break;
@@ -634,6 +634,7 @@ export default class AndromedaBannerSlider extends React.Component {
   }
 
   _canSlideRight() {
+    this.state.currentIndex < this.props.items.length - 1)
     return this.props.infinite ||
       this.state.currentIndex < this.props.items.length - 1;
   }
