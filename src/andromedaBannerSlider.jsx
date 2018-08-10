@@ -1227,14 +1227,6 @@ export default class AndromedaBannerSlider extends React.Component {
               </div>
             </div>
           }
-          {<div className='presentation-slider-mobile-info' style={{ color: this.props.titleColor }}>
-            <div className='title'>
-              <p>{this.props.items[this.state.currentIndex].title}</p>
-            </div>
-            <div className='description' style={{ color: this.props.descriptionColor }}>
-              <p>{this.props.items[this.state.currentIndex].description}</p>
-            </div>
-          </div>}
           {
             this.props.showBullets &&
             <div className='presentation-slider-bullets'>

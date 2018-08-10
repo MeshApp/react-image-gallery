@@ -254,6 +254,13 @@ var AndromedaBannerSlider = function (_React$Component) {
       var onImageError = _this.props.onImageError || _this._handleImageError;
 
       var clickStyle = _this.props.onSliderClick ? { cursor: 'pointer' } : {};
+      var fontSizeDescription = _this.props.fontSize;
+      var fontSizeTitle = fontSizeDescription * 3.2;
+
+      if (window.matchMedia("(max-width: 760px)").matches) {
+        // fontSizeDescription = this.props.fontSize * 0.8
+        fontSizeTitle = fontSizeDescription * 1.8;
+      }
 
       return _react2.default.createElement(
         'div',
@@ -294,12 +301,12 @@ var AndromedaBannerSlider = function (_React$Component) {
             { className: 'meshapp-info-wrapper' },
             item.title && _react2.default.createElement(
               'h2',
-              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor, fontSize: _this.props.fontSize * 3.2 + 'px' } },
+              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor, fontSize: fontSizeTitle + 'px' } },
               item.title
             ),
             item.description && _react2.default.createElement(
               'p',
-              { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: _this.props.fontSize + 'px' } },
+              { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: fontSizeDescription + 'px' } },
               item.description
             )
           )
@@ -1164,28 +1171,6 @@ var AndromedaBannerSlider = function (_React$Component) {
                   'aria-label': 'Thumbnail Navigation'
                 },
                 thumbnails
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'presentation-slider-mobile-info', style: { color: this.props.titleColor } },
-            _react2.default.createElement(
-              'div',
-              { className: 'title' },
-              _react2.default.createElement(
-                'p',
-                null,
-                this.props.items[this.state.currentIndex].title
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'description', style: { color: this.props.descriptionColor } },
-              _react2.default.createElement(
-                'p',
-                null,
-                this.props.items[this.state.currentIndex].description
               )
             )
           ),
