@@ -77,6 +77,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 
       .meshapp-image-gallery-title {
         font-size: $title-font-size;
+        text-shadow: 1px 1px 1px #333;
 
         @media (max-width: $ig-screen-sm-min) {
           display: block;
@@ -87,6 +88,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
         font-size: $title-font-size * 0.32;
         font-weight: 600;
         line-height: 1.2;
+        text-shadow: 1px 1px 1px #333;
 
         @media (max-width: $ig-screen-sm-min) {
           display: block;
