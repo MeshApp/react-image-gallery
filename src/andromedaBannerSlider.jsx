@@ -915,6 +915,13 @@ export default class AndromedaBannerSlider extends React.Component {
     const onImageError = this.props.onImageError || this._handleImageError;
 
     let clickStyle = this.props.onSliderClick ? { cursor: 'pointer' } : {}
+    let fontSizeDescription = this.props.fontSize
+    let fontSizeTitle = fontSizeDescription * 3.2
+
+    if (window.matchMedia("(max-width: 760px)").matches) {
+      // fontSizeDescription = this.props.fontSize * 0.8
+      fontSizeTitle = fontSizeDescription * 1.8
+    }
 
     return (
       <div className='image-gallery-image' style={clickStyle} onClick={() => this.sliderClicked(item)}>
@@ -953,13 +960,13 @@ export default class AndromedaBannerSlider extends React.Component {
           {<div className='meshapp-info-wrapper'>
             {
               item.title &&
-              <h2 className='meshapp-image-gallery-title' style={{ color: this.props.titleColor, fontSize: this.props.fontSize * 3.2 + 'px' }}>
+              <h2 className='meshapp-image-gallery-title' style={{ color: this.props.titleColor, fontSize: fontSizeTitle + 'px' }}>
                 {item.title}
               </h2>
             }
             {
               item.description &&
-              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor, fontSize: this.props.fontSize + 'px' }}>
+              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor, fontSize: fontSizeDescription + 'px' }}>
                 {item.description}
               </p>
             }
