@@ -63,6 +63,10 @@
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%); }
+      @media (max-width: 768px) {
+        .image-gallery.andromeda-banner-slider .container {
+          top: 5%;
+          display: block; } }
     .image-gallery.andromeda-banner-slider .meshapp-info-wrapper {
       position: relative;
       display: block;
@@ -70,6 +74,9 @@
       height: 60%;
       overflow: hidden;
       text-overflow: ellipsis; }
+      @media (max-width: 768px) {
+        .image-gallery.andromeda-banner-slider .meshapp-info-wrapper {
+          height: 45%; } }
       .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
         font-size: 50px; }
         @media (max-width: 768px) {

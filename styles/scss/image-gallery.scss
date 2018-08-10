@@ -48,6 +48,11 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
+
+      @media (max-width: $ig-screen-sm-min) {
+        top: 5%;
+        display: block;
+      }
     }
     
     .meshapp-info-wrapper {
@@ -58,6 +63,10 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       height: 60%;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @media (max-width: $ig-screen-sm-min) {
+        height: 45%;
+      }
 
       .meshapp-image-gallery-title {
         font-size: $title-font-size;
