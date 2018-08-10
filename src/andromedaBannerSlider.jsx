@@ -634,7 +634,6 @@ export default class AndromedaBannerSlider extends React.Component {
   }
 
   _canSlideRight() {
-    this.state.currentIndex < this.props.items.length - 1)
     return this.props.infinite ||
       this.state.currentIndex < this.props.items.length - 1;
   }

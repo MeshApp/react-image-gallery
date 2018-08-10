@@ -157,12 +157,12 @@ var AndromedaBannerSlider = function (_React$Component) {
 
       switch (key) {
         case LEFT_ARROW:
-          if (_this._canSlideLeft() && !_this._intervalId) {
+          if (_this._canSlideLeft()) {
             _this._slideLeft();
           }
           break;
         case RIGHT_ARROW:
-          if (_this._canSlideRight() && !_this._intervalId) {
+          if (_this._canSlideRight()) {
             _this._slideRight();
           }
           break;
