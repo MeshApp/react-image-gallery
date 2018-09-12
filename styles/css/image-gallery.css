@@ -82,15 +82,11 @@
         .image-gallery.andromeda-banner-slider .meshapp-info-wrapper {
           height: 45%; } }
       .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
-        font-size: 50px;
         text-shadow: 1px 1px 1px #333; }
         @media (max-width: 768px) {
           .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
             display: block; } }
       .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-description {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.2;
         text-shadow: 1px 1px 1px #333; }
         @media (max-width: 768px) {
           .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-description {

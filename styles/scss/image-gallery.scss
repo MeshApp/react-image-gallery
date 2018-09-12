@@ -63,7 +63,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
     }
     
     .meshapp-info-wrapper {
-      $title-font-size: 50px;
       position: relative;
       display: block;
       max-width: 500px;
@@ -76,7 +75,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       }
 
       .meshapp-image-gallery-title {
-        font-size: $title-font-size;
         text-shadow: 1px 1px 1px #333;
 
         @media (max-width: $ig-screen-sm-min) {
@@ -85,9 +83,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
       }
 
       .meshapp-image-gallery-description{
-        font-size: $title-font-size * 0.32;
-        font-weight: 600;
-        line-height: 1.2;
         text-shadow: 1px 1px 1px #333;
 
         @media (max-width: $ig-screen-sm-min) {
