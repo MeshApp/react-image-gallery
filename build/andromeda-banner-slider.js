@@ -254,13 +254,6 @@ var AndromedaBannerSlider = function (_React$Component) {
       var onImageError = _this.props.onImageError || _this._handleImageError;
 
       var clickStyle = _this.props.onSliderClick ? { cursor: 'pointer' } : {};
-      var fontSizeDescription = _this.props.fontSize;
-      var fontSizeTitle = fontSizeDescription * 3.2;
-
-      if (window.matchMedia("(max-width: 760px)").matches) {
-        // fontSizeDescription = this.props.fontSize * 0.8
-        fontSizeTitle = fontSizeDescription * 1.8;
-      }
 
       return _react2.default.createElement(
         'div',
@@ -301,12 +294,12 @@ var AndromedaBannerSlider = function (_React$Component) {
             { className: 'meshapp-info-wrapper' },
             item.title && _react2.default.createElement(
               'h2',
-              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor, fontSize: fontSizeTitle + 'px' } },
+              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor } },
               item.title
             ),
             item.description && _react2.default.createElement(
               'p',
-              { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: fontSizeDescription + 'px' } },
+              { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor } },
               item.description
             ),
             item.postUrl && _react2.default.createElement(
