@@ -44,7 +44,7 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
 
     .container{
       position: absolute;
-      top: 20%;
+      top: 12%;
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
@@ -435,6 +435,10 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
           padding: 5px 5px 5px 20px;
           font-size: 15px;
           display: none; }
+    }
+
+    .btn-meshapp{
+      margin-left: 20px; //same as description left padding
     }
   }
 

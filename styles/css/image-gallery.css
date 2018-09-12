@@ -59,7 +59,7 @@
     padding: 0; }
     .image-gallery.andromeda-banner-slider .container {
       position: absolute;
-      top: 20%;
+      top: 12%;
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%); }
@@ -354,6 +354,8 @@
           padding: 5px 5px 5px 20px;
           font-size: 15px;
           display: none; } }
+    .image-gallery-slide .meshapp-info-wrapper .btn-meshapp {
+      margin-left: 20px; }
   .image-gallery-slide .meshapp-insidenav-info-wrapper {
     top: 35%;
     display: flex;

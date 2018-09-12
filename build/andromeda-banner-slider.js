@@ -311,7 +311,7 @@ var AndromedaBannerSlider = function (_React$Component) {
             ),
             item.postUrl && _react2.default.createElement(
               'a',
-              { href: item.postUrl, className: 'btn btn-meshapp btn-primary', style: { backgroundColor: _this.props.buttonColor, borderColor: _this.props.buttonColor } },
+              { href: item.postUrl, className: 'btn btn-meshapp btn-primary btn-lg', style: { backgroundColor: _this.props.buttonColor, borderColor: _this.props.buttonColor } },
               'Ler'
             )
           )

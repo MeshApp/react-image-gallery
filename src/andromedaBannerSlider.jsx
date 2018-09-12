@@ -972,7 +972,7 @@ export default class AndromedaBannerSlider extends React.Component {
             }
             {
               item.postUrl &&
-              <a href={item.postUrl} className="btn btn-meshapp btn-primary" style={{ backgroundColor: this.props.buttonColor, borderColor: this.props.buttonColor }}>Ler</a>
+              <a href={item.postUrl} className="btn btn-meshapp btn-primary btn-lg" style={{ backgroundColor: this.props.buttonColor, borderColor: this.props.buttonColor }}>Ler</a>
             }
           </div>}
         </section>
