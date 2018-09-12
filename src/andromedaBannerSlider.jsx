@@ -84,8 +84,8 @@ export default class AndromedaBannerSlider extends React.Component {
     useTranslate3D: PropTypes.bool,
     arrowsColor: PropTypes.string,
     arrowsSize: PropTypes.string,
-    dotActiveColor: PropTypes.string,
-    dotInactiveColor: PropTypes.string,
+    dotColor: PropTypes.string,
+    buttonColor: PropTypes.string,
     onSliderClick: PropTypes.func,
     titleColor: PropTypes.string,
     descriptionColor: PropTypes.string,
@@ -121,8 +121,8 @@ export default class AndromedaBannerSlider extends React.Component {
     swipeThreshold: 30,
     arrowsColor: '#FFFFFF',
     arrowsSize: '40px',
-    dotActiveColor: 'black',
-    dotInactiveColor: 'white',
+    dotColor: 'white',
+    buttonColor: 'white',
     titleColor: 'white',
     descriptionColor: 'black',
     fontSize: 16,
@@ -970,6 +970,10 @@ export default class AndromedaBannerSlider extends React.Component {
                 {item.description}
               </p>
             }
+            {
+              item.postUrl &&
+              <a href={item.postUrl} className="btn btn-meshapp btn-primary" style={{ backgroundColor: this.props.buttonColor, borderColor: this.props.buttonColor }}>Ler</a>
+            }
           </div>}
         </section>
       </div>
@@ -1097,8 +1101,8 @@ export default class AndromedaBannerSlider extends React.Component {
           }
           return this.slideToIndex.call(this, index, event);
         };
-        let btnStyle = currentIndex === index ? { backgroundColor: `${this.props.dotActiveColor}`, border: `1px solid ${this.props.dotActiveColor}` } :
-          { backgroundColor: `${this.props.dotInactiveColor}`, border: `1px solid ${this.props.dotInactiveColor}` }
+        let btnStyle = currentIndex === index ? { backgroundColor: `${this.props.dotColor}`, border: `1px solid ${this.props.dotColor}` } :
+          { backgroundColor: `${this.props.dotColor}`, border: `1px solid ${this.props.dotColor}` }
         bullets.push(
           <button
             key={index}

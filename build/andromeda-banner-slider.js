@@ -308,6 +308,11 @@ var AndromedaBannerSlider = function (_React$Component) {
               'p',
               { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor, fontSize: fontSizeDescription + 'px' } },
               item.description
+            ),
+            item.postUrl && _react2.default.createElement(
+              'a',
+              { href: item.postUrl, className: 'btn btn-meshapp btn-primary', style: { backgroundColor: _this.props.buttonColor, borderColor: _this.props.buttonColor } },
+              'Ler'
             )
           )
         )
@@ -1052,7 +1057,7 @@ var AndromedaBannerSlider = function (_React$Component) {
             }
             return _this6.slideToIndex.call(_this6, index, event);
           };
-          var btnStyle = currentIndex === index ? { backgroundColor: '' + _this6.props.dotActiveColor, border: '1px solid ' + _this6.props.dotActiveColor } : { backgroundColor: '' + _this6.props.dotInactiveColor, border: '1px solid ' + _this6.props.dotInactiveColor };
+          var btnStyle = currentIndex === index ? { backgroundColor: '' + _this6.props.dotColor, border: '1px solid ' + _this6.props.dotColor } : { backgroundColor: '' + _this6.props.dotColor, border: '1px solid ' + _this6.props.dotColor };
           bullets.push(_react2.default.createElement('button', {
             key: index,
             type: 'button',
@@ -1247,8 +1252,8 @@ AndromedaBannerSlider.propTypes = {
   useTranslate3D: _propTypes2.default.bool,
   arrowsColor: _propTypes2.default.string,
   arrowsSize: _propTypes2.default.string,
-  dotActiveColor: _propTypes2.default.string,
-  dotInactiveColor: _propTypes2.default.string,
+  dotColor: _propTypes2.default.string,
+  buttonColor: _propTypes2.default.string,
   onSliderClick: _propTypes2.default.func,
   titleColor: _propTypes2.default.string,
   descriptionColor: _propTypes2.default.string,
@@ -1283,8 +1288,8 @@ AndromedaBannerSlider.defaultProps = {
   swipeThreshold: 30,
   arrowsColor: '#FFFFFF',
   arrowsSize: '40px',
-  dotActiveColor: 'black',
-  dotInactiveColor: 'white',
+  dotColor: 'white',
+  buttonColor: 'white',
   titleColor: 'white',
   descriptionColor: 'black',
   fontSize: 16,
