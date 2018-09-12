@@ -294,12 +294,12 @@ var AndromedaBannerSlider = function (_React$Component) {
             { className: 'meshapp-info-wrapper' },
             item.title && _react2.default.createElement(
               'h2',
-              { className: 'meshapp-image-gallery-title', style: { color: _this.props.titleColor } },
+              { className: 'meshapp-slider-title', style: { color: _this.props.titleColor } },
               item.title
             ),
             item.description && _react2.default.createElement(
               'p',
-              { className: 'meshapp-image-gallery-description', style: { color: _this.props.descriptionColor } },
+              { className: 'meshapp-slider-description', style: { color: _this.props.descriptionColor } },
               item.description
             ),
             item.postUrl && _react2.default.createElement(

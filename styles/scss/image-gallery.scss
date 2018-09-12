@@ -74,20 +74,27 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
         height: 45%;
       }
 
-      .meshapp-image-gallery-title {
+      .meshapp-slider-title {
         text-shadow: 1px 1px 1px #333;
+        padding: 20px;
+        white-space: normal;
 
         @media (max-width: $ig-screen-sm-min) {
           display: block;
         }
       }
 
-      .meshapp-image-gallery-description{
+      .meshapp-slider-description{
         text-shadow: 1px 1px 1px #333;
+        padding: 5px 5px 5px 20px;
 
         @media (max-width: $ig-screen-sm-min) {
           display: block;
         }
+      }
+
+      .btn-meshapp{
+        margin-left: 20px; //same as description left padding
       }
     }
 
@@ -430,10 +437,6 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
           padding: 5px 5px 5px 20px;
           font-size: 15px;
           display: none; }
-    }
-
-    .btn-meshapp{
-      margin-left: 20px; //same as description left padding
     }
   }
 

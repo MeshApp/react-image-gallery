@@ -953,13 +953,13 @@ export default class AndromedaBannerSlider extends React.Component {
           {<div className='meshapp-info-wrapper'>
             {
               item.title &&
-              <h2 className='meshapp-image-gallery-title' style={{ color: this.props.titleColor }}>
+              <h2 className='meshapp-slider-title' style={{ color: this.props.titleColor }}>
                 {item.title}
               </h2>
             }
             {
               item.description &&
-              <p className='meshapp-image-gallery-description' style={{ color: this.props.descriptionColor }}>
+              <p className='meshapp-slider-description' style={{ color: this.props.descriptionColor }}>
                 {item.description}
               </p>
             }

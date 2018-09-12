@@ -81,16 +81,21 @@
       @media (max-width: 768px) {
         .image-gallery.andromeda-banner-slider .meshapp-info-wrapper {
           height: 45%; } }
-      .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
-        text-shadow: 1px 1px 1px #333; }
+      .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-slider-title {
+        text-shadow: 1px 1px 1px #333;
+        padding: 20px;
+        white-space: normal; }
         @media (max-width: 768px) {
-          .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-title {
+          .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-slider-title {
             display: block; } }
-      .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-description {
-        text-shadow: 1px 1px 1px #333; }
+      .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-slider-description {
+        text-shadow: 1px 1px 1px #333;
+        padding: 5px 5px 5px 20px; }
         @media (max-width: 768px) {
-          .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-image-gallery-description {
+          .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .meshapp-slider-description {
             display: block; } }
+      .image-gallery.andromeda-banner-slider .meshapp-info-wrapper .btn-meshapp {
+        margin-left: 20px; }
     .image-gallery.andromeda-banner-slider .presentation-slider-bullets {
       justify-content: center;
       bottom: 15%;
@@ -350,8 +355,6 @@
           padding: 5px 5px 5px 20px;
           font-size: 15px;
           display: none; } }
-    .image-gallery-slide .meshapp-info-wrapper .btn-meshapp {
-      margin-left: 20px; }
   .image-gallery-slide .meshapp-insidenav-info-wrapper {
     top: 35%;
     display: flex;
