@@ -913,7 +913,7 @@ export default class AndromedaBannerSlider extends React.Component {
 
     _renderItem = (item) => {
         const onImageError = this.props.onImageError || this._handleImageError;
-        console.log('VERSION CHECK 0.8.50')
+
         let clickStyle = this.props.onSliderClick ? { cursor: 'pointer' } : {}
 
         return (

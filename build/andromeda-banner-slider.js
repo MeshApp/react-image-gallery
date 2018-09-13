@@ -252,7 +252,7 @@ var AndromedaBannerSlider = function (_React$Component) {
 
         _this._renderItem = function (item) {
             var onImageError = _this.props.onImageError || _this._handleImageError;
-            console.log('VERSION CHECK 0.8.50');
+
             var clickStyle = _this.props.onSliderClick ? { cursor: 'pointer' } : {};
 
             return _react2.default.createElement(
